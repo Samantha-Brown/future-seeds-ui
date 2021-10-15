@@ -1,10 +1,13 @@
+import { Route, Switch } from 'react-router'
 import './App.css';
 
 const App = () => {
 
   return (
     <main>
-      <h1>Future Seeds</h1>
+      <Switch>
+        <Route exact path='/' component={ Home } />
+      </Switch>
     </main>
   )
 }
