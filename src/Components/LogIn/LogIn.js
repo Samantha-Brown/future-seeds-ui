@@ -3,9 +3,11 @@ import { users } from '../../data/mockData'
 import './LogIn.css'
 
 import loginImg from '../../images/login.png'
-import signUpImg from '../../images/signup.png'
+import plant2 from '../../images/plant2.png'
+import { useEffect, useState } from 'react'
 
 const LogIn = () => {
+  const [currentUser, setCurrentUser] = useState()
 
   const userList = users.map(user => {
     return (
@@ -13,15 +15,38 @@ const LogIn = () => {
     )
   })
 
+  const handleChange = (userID) => {
+    console.log(userID)
+    setCurrentUser(userID)
+  }
 
+  const conditionalLink = () => {
+    if (!currentUser) {
+      console.log('no user')
+      return '/login/'
+    } else {
+      console.log('user')
+      return '/seeds/'
+    }
+  }
+
+  useEffect(() => {
+    conditionalLink()
+  }, [currentUser])
 
   return (
     <div className='login-container'>
-      <h3>Select Your User Name</h3>
-      <select className='user-list'> {userList} </select>
-      <img src={loginImg} className='menu-btn' alt='log in btn'/>
+      <img src={plant2} alt='second plant sketch' className='single-plant'/>
+      <h3 className='select-name'>Select Your User Name</h3>
+      <select className='user-list' onChange={e => handleChange(e.target.value)}> {userList} </select>
+      <Link to={conditionalLink}>
+        <img src={loginImg} className='menu-btn' alt='log in btn'/>
+      </Link>
       <Link to='/signup/' style={{ textDecoration: 'none' }}>
-      <h4 className='new-user-prompt'>New User? Sign Up Here</h4>
+        <h4 className='new-user-prompt'>New User? Sign Up Here</h4>
+      </Link>
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <h4 className='new-user-prompt'>Go Back Home</h4>
       </Link>
     </div>
   )

@@ -8,12 +8,22 @@
   height: 100vh;
 }
 
+.single-plant {
+  height: 20vh;
+
+}
+
+.select-name {
+  color: white;
+  font-size: 4vh;
+}
+
 .user-list {
-  height: 6vh;
-  width: auto;
-  font-size: 15px;
+  font-size: 3vh;
+  margin-top: 4vh;
 }
 
 .new-user-prompt {
   color: white;
+  margin: 1vh;
 }
