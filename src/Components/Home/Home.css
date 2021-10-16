@@ -7,9 +7,15 @@
   align-items: center;
 }
 
+.seed-logo {
+  width: 85vw;
+
+}
+
 .home-logo {
-  width: 50vw;
+  width: 75vw;
   height: auto;
+  margin: 5vh;
 }
 
 .options-container {
@@ -17,11 +23,12 @@
 }
 
 .menu-btn {
-  width: 20vw;
-  height: auto;
+  height: 7vh;
+  width: auto;
   margin: 3vw;
 }
 
 .menu-btn:hover {
-  filter: invert(0.25);
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
 }
