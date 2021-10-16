@@ -22,10 +22,8 @@ const LogIn = () => {
 
   const conditionalLink = () => {
     if (!currentUser) {
-      console.log('no user')
       return '/login/'
     } else {
-      console.log('user')
       return '/seeds/'
     }
   }
@@ -38,7 +36,10 @@ const LogIn = () => {
     <div className='login-container'>
       <img src={plant2} alt='second plant sketch' className='single-plant'/>
       <h3 className='select-name'>Select Your User Name</h3>
-      <select className='user-list' onChange={e => handleChange(e.target.value)}> {userList} </select>
+      <select className='user-list' onChange={e => handleChange(e.target.value)}> 
+        {!currentUser && <option>Click to Expand...</option>}
+        {userList} 
+      </select>
       <Link to={conditionalLink}>
         <img src={loginImg} className='menu-btn' alt='log in btn'/>
       </Link>
