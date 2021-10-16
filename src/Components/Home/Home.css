@@ -20,11 +20,11 @@
 
 .options-container {
   display: flex;
+  max-width: 70vw;
 }
 
 .menu-btn {
-  height: 7vh;
-  width: auto;
+  width: 20vw;
   margin: 3vw;
 }
 
