@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 
 const LogIn = () => {
   const [currentUser, setCurrentUser] = useState()
+  const [conditionalLink, setConditionalLink] = useState('/login/')
 
   const userList = users.map(user => {
     return (
@@ -16,20 +17,13 @@ const LogIn = () => {
   })
 
   const handleChange = (userID) => {
-    console.log(userID)
     setCurrentUser(userID)
   }
 
-  const conditionalLink = () => {
-    if (!currentUser) {
-      return '/login/'
-    } else {
-      return '/seeds/'
-    }
-  }
-
   useEffect(() => {
-    conditionalLink()
+    if (currentUser) {
+      setConditionalLink('/seeds/')
+    }
   }, [currentUser])
 
   return (
