@@ -1,3 +1,10 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
@@ -10,4 +17,10 @@
 
 .input-signup, .input-intentions {
   margin: 10px;
+}
+
+.signup-btn {
+  max-width: 25vh;
+  height: auto;
+  margin: 3vw;
 }

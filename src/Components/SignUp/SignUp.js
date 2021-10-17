@@ -2,6 +2,8 @@ import { useState } from 'react'
 import StateList from '../StateList/StateList'
 import './SignUp.css'
 
+import signUp from '../../images/signup.png'
+
 const SignUp = () => {
   const [userFirstName, setUserFirstName] = useState('')
   const [userLastName, setUserLastName] = useState('')
@@ -52,6 +54,7 @@ const SignUp = () => {
           resize='none'
         />
       </div>
+      <img src={signUp} alt='sign up' className='signup-btn'/>
     </div>
   )
 }
