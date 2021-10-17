@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className='home-container'>
-      <img src={seedGrow} className='seed-logo'/>
+      <img src={seedGrow} className='seed-logo' alt='seed logo'/>
       <img src={titleWhite} className='home-logo' alt='future seeds title'/>
       <div className='options-container'>
         <Link to='/login/'>
