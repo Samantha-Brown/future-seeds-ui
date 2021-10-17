@@ -27,3 +27,9 @@
   color: white;
   margin: 1vh;
 }
+
+.menu-btn-login {
+  max-width: 25vh;
+  height: auto;
+  margin: 3vw;
+}

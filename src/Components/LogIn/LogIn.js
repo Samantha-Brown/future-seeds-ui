@@ -35,7 +35,7 @@ const LogIn = () => {
         {userList} 
       </select>
       <Link to={conditionalLink}>
-        <img src={loginImg} className='menu-btn' alt='log in btn'/>
+        <img src={loginImg} className='menu-btn-login' alt='log in btn'/>
       </Link>
       <Link to='/signup/' style={{ textDecoration: 'none' }}>
         <h4 className='new-user-prompt'>New User? Sign Up Here</h4>
