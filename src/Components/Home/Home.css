@@ -6,13 +6,12 @@
 }
 
 .seed-logo {
-  height: 40vh;
+  height: auto;
   max-width: 70vw;
-
 }
 
 .home-logo {
-  height: 15vh;
+  height: auto;
   max-width: 75vw;
   margin: 5vh;
 }
@@ -23,7 +22,7 @@
 }
 
 .menu-btn {
-  height: 12vh;
+  height: auto;
   max-width: 25vw;
   margin: 3vw;
 }
