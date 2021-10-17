@@ -6,8 +6,10 @@ import loginImg from '../../images/login.png'
 import plant2 from '../../images/plant2.png'
 import { useEffect, useState } from 'react'
 
-const LogIn = () => {
-  const [currentUser, setCurrentUser] = useState()
+import SeedIndex from '../SeedIndex/SeedIndex'
+
+const LogIn = ({ currentUser, handleChange }) => {
+  // const [currentUser, setCurrentUser] = useState()
   const [conditionalLink, setConditionalLink] = useState('/login/')
 
   const userList = users.map(user => {
@@ -16,9 +18,9 @@ const LogIn = () => {
     )
   })
 
-  const handleChange = (userID) => {
-    setCurrentUser(userID)
-  }
+  // const handleChange = (userID) => {
+  //   setCurrentUser(userID)
+  // }
 
   useEffect(() => {
     if (currentUser) {
@@ -30,12 +32,13 @@ const LogIn = () => {
     <div className='login-container'>
       <img src={plant2} alt='second plant sketch' className='single-plant'/>
       <h3 className='select-name'>Select Your User Name</h3>
-      <select className='user-list' onChange={e => handleChange(e.target.value)}> 
+      <select className='user-list' onChange={e => handleChange(e.target.value)}>
         {!currentUser && <option>Click to Expand...</option>}
-        {userList} 
+        {userList}
       </select>
       <Link to={conditionalLink}>
         <img src={loginImg} className='menu-btn-login' alt='log in btn'/>
+
       </Link>
       <Link to='/signup/' style={{ textDecoration: 'none' }}>
         <h4 className='new-user-prompt'>New User? Sign Up Here</h4>
