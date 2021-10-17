@@ -9,7 +9,7 @@ const StateList = ({ handleLocationChange }) => {
   })
 
   return (
-    <select onChange={e => handleLocationChange(e.target.value)}>
+    <select className='input-signup' onChange={e => handleLocationChange(e.target.value)}>
       { stateListings }
     </select>
   )
