@@ -1,4 +1,4 @@
-import { stateList } from '../../dataFiles/userData'
+import { stateList } from '../../data/stateList'
 
 const StateList = ({ handleLocationChange }) => {
 
