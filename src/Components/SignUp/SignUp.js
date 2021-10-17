@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import StateList from '../StateList/StateList'
 import './SignUp.css'
@@ -46,7 +47,7 @@ const SignUp = () => {
         <StateList handleLocationChange={handleLocationChange}/>
         <textarea
           type='text'
-          maxLength='50'
+          maxLength='100'
           placeholder='Intentions (short blurb)'
           name='intentions'
           onChange={e => setUserIntentions(e.target.value)}
@@ -55,6 +56,9 @@ const SignUp = () => {
         />
       </div>
       <img src={signUp} alt='sign up' className='signup-btn'/>
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <h4 className='new-user-prompt'>Go Back Home</h4>
+      </Link>
     </div>
   )
 }

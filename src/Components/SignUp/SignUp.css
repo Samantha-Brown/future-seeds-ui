@@ -8,7 +8,7 @@
 .input-container {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 250px;
 }
 
 .input-intentions {
@@ -17,6 +17,9 @@
 
 .input-signup, .input-intentions {
   margin: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+
 }
 
 .signup-btn {
