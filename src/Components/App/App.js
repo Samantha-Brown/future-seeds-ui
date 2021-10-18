@@ -22,7 +22,7 @@ const App = () => {
         <Route exact path='/login/'>
           <LogIn
             currentUser={ currentUser }
-            handleChange = { handleChange }
+            handleChange = {handleChange }
             />
           </Route>
         <Route exact path='/seeds'>

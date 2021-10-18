@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import SeedIndex from '../SeedIndex/SeedIndex'
 
 const LogIn = ({ currentUser, handleChange }) => {
-  // const [currentUser, setCurrentUser] = useState()
+
   const [conditionalLink, setConditionalLink] = useState('/login/')
 
   const userList = users.map(user => {
@@ -17,10 +17,6 @@ const LogIn = ({ currentUser, handleChange }) => {
       <option value={user.id} key={user.id}>{`${user.first_name}-${user.last_name}-${user.id}`}</option>
     )
   })
-
-  // const handleChange = (userID) => {
-  //   setCurrentUser(userID)
-  // }
 
   useEffect(() => {
     if (currentUser) {
