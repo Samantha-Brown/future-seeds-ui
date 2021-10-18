@@ -16,7 +16,6 @@ const SignUp = () => {
     setUserState(location)
   }
 
-
   return (
     <div className='signup-container'>
       <div className='input-container'>
