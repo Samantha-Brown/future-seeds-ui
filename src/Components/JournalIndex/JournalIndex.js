@@ -4,7 +4,7 @@ import { users, journalEntries } from '../../data/mockData'
 import JournalCard from '../JournalCard/JournalCard'
 import './JournalIndex.css'
 
-const JournalIndex = ( { } ) => {
+const JournalIndex = ( { currentUser } ) => {
 
   const userDetails = users.find(user => user.id === Number(currentUser))
 
@@ -24,7 +24,7 @@ const JournalIndex = ( { } ) => {
       <div>{`Hello, ${userDetails.first_name}`} </div>
       <button>Add new entry</button>
       <JournalCard
-        journalCards={JournalCards}
+        journalCards={journalCards}
         />
     </div>
   )
