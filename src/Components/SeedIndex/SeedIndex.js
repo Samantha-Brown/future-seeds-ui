@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { users, seeds } from '../../data/mockData'
 import SeedCard from '../SeedCard/SeedCard'
 import SeedForm from '../SeedForm/SeedForm'
@@ -7,9 +6,7 @@ import './SeedIndex.css'
 
 const SeedIndex = ( {currentUser}) => {
   const [showForm, setShowForm] = useState(false)
-
   const userDetails = users.find(user => user.id === Number(currentUser))
-
   const userSeeds = seeds.filter(seed => seed.user_id === Number(currentUser))
 
   const seedCards = userSeeds.map(userSeeds => {

@@ -5,7 +5,7 @@ import SignUp from '../SignUp/SignUp';
 import LogIn from '../LogIn/LogIn';
 import SeedIndex from '../SeedIndex/SeedIndex'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState('')
