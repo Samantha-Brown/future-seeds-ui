@@ -6,8 +6,6 @@ import loginImg from '../../images/login.png'
 import plant2 from '../../images/plant2.png'
 import { useEffect, useState } from 'react'
 
-import SeedIndex from '../SeedIndex/SeedIndex'
-
 const LogIn = ({ currentUser, handleChange }) => {
 
   const [conditionalLink, setConditionalLink] = useState('/login/')
