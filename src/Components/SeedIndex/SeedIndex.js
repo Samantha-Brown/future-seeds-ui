@@ -2,9 +2,11 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { users, seeds } from '../../data/mockData'
 import SeedCard from '../SeedCard/SeedCard'
+import SeedForm from '../SeedForm/SeedForm'
 import './SeedIndex.css'
 
 const SeedIndex = ( {currentUser}) => {
+  const [showForm, setShowForm] = useState(false)
 
   const userDetails = users.find(user => user.id === Number(currentUser))
 
@@ -27,7 +29,10 @@ const SeedIndex = ( {currentUser}) => {
   return (
     <div className='seed-index'>
       <div>{`Hello, ${userDetails.first_name}`} </div>
-      <button>New Card</button>
+      <button onClick= {() => setShowForm(true)}>New Card</button>
+      {showForm && <div>
+        <SeedForm />
+        </div>}
       <SeedCard
         seedCards={seedCards}
         />
