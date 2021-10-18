@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# Future Seeds:
+to clone & access the site 
+
+`git clone git@github.com:future-seeds/future-seeds-ui.git`
+
+
+`cd future-seeds-ui`
+
+
+`npm -i`
+
+
+`npm start`
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
