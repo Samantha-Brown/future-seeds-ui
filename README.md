@@ -1,9 +1,16 @@
 # Future Seeds:
+to clone & access the site 
 
-`git clone`
-`cd `
+`git clone git@github.com:future-seeds/future-seeds-ui.git`
+
+
+`cd future-seeds-ui`
+
+
 `npm -i`
-`npm start `
+
+
+`npm start`
 
 
 
