@@ -31,6 +31,11 @@ const App = () => {
             currentUser={ currentUser }
             />
         </Route>
+        <Route exact path='/journal'>
+          <JournalIndex
+            currentUser={ currentUser }
+            />
+        </Route>
       </Switch>
     </main>
   )
