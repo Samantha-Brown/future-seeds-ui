@@ -4,9 +4,4 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/install:
-           build: "npm run build"
-      - cypress/run:
-           record: true
-           parallel: true
-           parallelism: 5
+      - cypress/run
