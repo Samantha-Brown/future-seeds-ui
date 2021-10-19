@@ -54,10 +54,12 @@
 
 .mission {
   width: 30vw;
+  height: 18vh;
+  margin-top: 15px;
   border-bottom: 1px solid rgba(96, 96, 96, 0.379);
 }
 
-.mission-quote {
+.mission-quote, .mission-author {
   margin: 10px;
   color:rgba(63, 132, 93)
 }

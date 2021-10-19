@@ -24,7 +24,7 @@ const Home = () => {
       <div className='bottom-home'>
         <div className='mission'>
           <h4 className='mission-quote'>"... this is where the impactful mission statement goes. Oh my, it's SO impactful. Seeds, Journals, etc."</h4>
-          <p className='mission-quote'>- Future Seeds</p>
+          <p className='mission-author'>- Future Seeds</p>
         </div>
       </div>
     </ div>
