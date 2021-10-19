@@ -1,33 +1,35 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.seed-logo {
-  height: auto;
-  max-width: 70vw;
-}
-
-.home-logo {
-  height: auto;
-  max-width: 75vw;
-  margin: 5vh;
-}
-
-.options-container {
+.top-home-bar {
+  height: 10vh;
+  width: 100vw;
   display: flex;
-  max-width: 70vw;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(96, 96, 96, 0.379);
 }
 
-.menu-btn {
-  height: auto;
-  max-width: 25vw;
-  margin: 3vw;
+.home-links {
+  
 }
 
-.menu-btn:hover {
-  transform: scale(1.1);
-  transition: all .3s ease-in-out;
+.small-logo {
+  height: 8vh;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.main-title {
+  height: 50vh;
+  width: 100vw;
+  border-bottom: 1px solid rgba(96, 96, 96, 0.379);
+}
+
+.big-logo {
+  width: 70vw;
 }
