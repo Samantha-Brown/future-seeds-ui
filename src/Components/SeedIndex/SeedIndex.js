@@ -26,7 +26,7 @@ const SeedIndex = ( {currentUser}) => {
 
   return (
     <div className='seed-index'>
-      <div>{`Hello, {userDetails.first_name}`} </div>
+      <div>{`Hello, ${userDetails.first_name}`} </div>
       <button>New Card</button>
       <SeedCard
         seedCards={seedCards}
