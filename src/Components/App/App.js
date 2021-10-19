@@ -1,9 +1,10 @@
 import Home from '../Home/Home';
-import { Route, Switch } from 'react-router'
+import { Route, Switch } from 'react-router';
 import './App.css';
 import SignUp from '../SignUp/SignUp';
 import LogIn from '../LogIn/LogIn';
-import SeedIndex from '../SeedIndex/SeedIndex'
+import SeedIndex from '../SeedIndex/SeedIndex';
+import JournalIndex from '../JournalIndex/JournalIndex';
 
 import { useState } from 'react'
 
