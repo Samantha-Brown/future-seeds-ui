@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { users, journalEntries } from '../../data/mockData'
 import JournalCard from '../JournalCard/JournalCard'
+import JournalForm from '../JournalForm/JournalForm'
 import './JournalIndex.css'
 
 const JournalIndex = ( { currentUser } ) => {
-
   const userDetails = users.find(user => user.id === Number(currentUser))
-
+  const [showForm, setShowForm] = useState(false)
   const userJournalEntries = journalEntries.filter(entry => entry.user_id ===Number(currentUser))
 
   const journalCards = userJournalEntries.map(journalEntries => {
@@ -22,12 +22,15 @@ const JournalIndex = ( { currentUser } ) => {
   return (
     <div className='journal-index'>
       <div>{`Hello, ${userDetails.first_name}`} </div>
-      <button>Add new entry</button>
+      <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
+      {showForm && <div>
+      <JournalForm />
+      </div>}
       <JournalCard
         journalCards={journalCards}
         />
     </div>
   )
 }
-
+//Needs a submit form functionality next - after BE connection?
 export default JournalIndex
