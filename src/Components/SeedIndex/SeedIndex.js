@@ -17,13 +17,17 @@ const SeedIndex = ( {currentUser}) => {
         <h1 className='seed-title'>{userSeeds.name}</h1>
         <div className='plant-info'>
           <img className='plant-image' src={plantImage} alt='green plant with pink background' />
-
+          <div className='plant-text'>
             <ul>{`Plant ${userSeeds.planting_depth} inches deep`}</ul>
             <ul>{`${userSeeds.days_to_germinate} days to germinate`}</ul>
             <ul>{`${userSeeds.expected_plant_height} inches tall`}</ul>
             <ul>{`${userSeeds.sun_exposure} sun`}</ul>
             <ul>{`${userSeeds.time_to_harvest} Days to harvest`}</ul>
-            <ul>{` Notes: ${userSeeds.notes}`}</ul>
+            <div className='notes'>
+              <ul>Notes:</ul>
+              <ul>{userSeeds.notes}</ul>
+            </div>
+          </div>
         </div>
       </div>
     )
