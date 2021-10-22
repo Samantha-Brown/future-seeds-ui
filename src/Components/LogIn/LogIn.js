@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
-import { users } from '../../data/mockData'
 import './LogIn.css'
-
 import loginImg from '../../images/login.png'
 import plant2 from '../../images/plant2.png'
 import { useEffect, useState } from 'react'
 
-const LogIn = ({ currentUser, handleChange }) => {
+const LogIn = ({ currentUser, handleChange, usersList  }) => {
 
   const [conditionalLink, setConditionalLink] = useState('/login/')
 
+  const { users } = usersList;
+
   const userList = users.map(user => {
     return (
-      <option value={user.id} key={user.id}>{`${user.first_name}-${user.last_name}-${user.id}`}</option>
+      <option value={user.id} key={user.id}>{`${user.firstName}-${user.lastName}-${user.id}`}</option>
     )
   })
 
