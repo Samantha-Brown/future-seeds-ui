@@ -6,10 +6,21 @@ import LogIn from '../LogIn/LogIn';
 import SeedIndex from '../SeedIndex/SeedIndex';
 import JournalIndex from '../JournalIndex/JournalIndex';
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+import { useQuery, gql } from '@apollo/client';
+import { LOAD_ALL_USERS } from '../../GraphQL/Queries'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState('')
+
+  const { error, loading, data } = useQuery(LOAD_ALL_USERS)
+
+  useEffect(() => {
+    if (data) {
+      console.log('graphql', data)
+    }
+  }, [])
 
   const handleChange = (userID) => {
     setCurrentUser(userID)
