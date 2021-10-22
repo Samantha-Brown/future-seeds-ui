@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { users, seeds } from '../../data/mockData'
 import SeedCard from '../SeedCard/SeedCard'
 import SeedForm from '../SeedForm/SeedForm'
+import NavBar from '../NavBar/NavBar'
 import plantImage from '../../images/caleb-george.jpg'
 
 import './SeedIndex.css'
@@ -35,8 +36,13 @@ const SeedIndex = ( {currentUser}) => {
   })
 
   return (
+    <div>
+    <NavBar/>
     <div className='seed-index'>
+      <div>
       <div>{`Hello, ${userDetails.first_name}`} </div>
+
+      </div>
       <button onClick= {() => setShowForm(true)}>New Card</button>
       {showForm && <div>
         <SeedForm />
@@ -44,6 +50,7 @@ const SeedIndex = ( {currentUser}) => {
       <SeedCard
         seedCards={seedCards}
         />
+    </div>
     </div>
   )
 }
