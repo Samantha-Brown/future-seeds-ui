@@ -3,6 +3,32 @@ import ReactDOM from 'react-dom';
 import App from './Components/App/App'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
+import { onError } from '@apollo/client/link/error';
+import { createHttpLink } from '@apollo/client';
+
+const errorLink = onError(({ graphQLErrors, networkError}) => {
+  if ( graphQLErrors ) {
+    graphQLErrors.map(({ message, location, path }) => {
+      alert(`Graphql error ${message}`)
+    })
+  }
+})
 
 
-ReactDOM.render(<BrowserRouter> <App /> </BrowserRouter>  ,document.getElementById('root'));
+const link = from([
+  errorLink,
+  new HttpLink({uri: "https://future-seeds-api.herokuapp.com/graphql"})
+])
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: link
+})
+ReactDOM.render(
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>,
+    document.getElementById('root'));
