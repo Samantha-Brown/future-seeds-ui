@@ -10,7 +10,7 @@ import { createHttpLink } from '@apollo/client';
 const errorLink = onError(({ graphQLErrors, networkError}) => {
   if ( graphQLErrors ) {
     graphQLErrors.map(({ message, location, path }) => {
-      alert(`Graphql error ${message}`)
+      return alert(`Graphql error ${message}`)
     })
   }
 })
@@ -25,6 +25,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: link
 })
+
 ReactDOM.render(
   <BrowserRouter>
     <ApolloProvider client={client}>
