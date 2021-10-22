@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { users, journalEntries } from '../../data/mockData'
 import JournalCard from '../JournalCard/JournalCard'
 import JournalForm from '../JournalForm/JournalForm'
+import NavBar from '../NavBar/NavBar'
 import './JournalIndex.css'
 
 const JournalIndex = ( { currentUser } ) => {
@@ -20,6 +21,8 @@ const JournalIndex = ( { currentUser } ) => {
   })
 
   return (
+    <div>
+    <NavBar/>
     <div className='journal-index'>
       <div>{`Hello, ${userDetails.first_name}`} </div>
       <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
@@ -29,6 +32,7 @@ const JournalIndex = ( { currentUser } ) => {
       <JournalCard
         journalCards={journalCards}
         />
+    </div>
     </div>
   )
 }
