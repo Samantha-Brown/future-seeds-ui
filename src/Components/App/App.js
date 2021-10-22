@@ -13,14 +13,15 @@ import { LOAD_ALL_USERS } from '../../GraphQL/Queries'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState('')
-
+  const [usersList, setUsersList] = useState([])
   const { error, loading, data } = useQuery(LOAD_ALL_USERS)
 
   useEffect(() => {
     if (data) {
       console.log('graphql', data)
+      setUsersList(data)
     }
-  }, [])
+  }, [data])
 
   const handleChange = (userID) => {
     setCurrentUser(userID)
