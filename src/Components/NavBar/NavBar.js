@@ -13,6 +13,7 @@ return (
   <div className='home-links'>
     <Link to='/seeds' className='links' style={{ textDecoration: 'none' }}>Seeds</Link>
     <Link to='/journal' className='links' style={{ textDecoration: 'none' }}>Journal</Link>
+      <Link to='/' className='links' style={{ textDecoration: 'none' }}>Log Out</Link>
   </div>
 </div>
   <div className='home-line'></div>
