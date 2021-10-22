@@ -18,10 +18,11 @@ const App = () => {
 
   useEffect(() => {
     if (data) {
-      console.log('graphql', data)
+      console.log(data)
       setUsersList(data)
     }
   }, [data])
+
 
   const handleChange = (userID) => {
     setCurrentUser(userID)
@@ -34,6 +35,7 @@ const App = () => {
         <Route exact path='/signup/' component= { SignUp }/>
         <Route exact path='/login/'>
           <LogIn
+            usersList={ usersList }
             currentUser={ currentUser }
             handleChange = {handleChange }
             />
