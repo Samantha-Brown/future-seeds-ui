@@ -3,6 +3,7 @@ import { users, seeds } from '../../data/mockData'
 import SeedCard from '../SeedCard/SeedCard'
 import SeedForm from '../SeedForm/SeedForm'
 import plantImage from '../../images/caleb-george.jpg'
+import { Link } from 'react-router-dom'
 
 import './SeedIndex.css'
 
@@ -14,6 +15,7 @@ const SeedIndex = ( {currentUser}) => {
   const seedCards = userSeeds.map(userSeeds => {
     return (
       <div className='seed-card' key={userSeeds.id}>
+        <Link to='/journal'>LINK TO JOURNAL</Link>
         <h1 className='seed-title'>{userSeeds.name}</h1>
         <div className='noise'></div>
         <div className='plant-info'>

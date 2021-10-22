@@ -6,9 +6,17 @@ import loginImg from '../../images/login.png'
 import plant2 from '../../images/plant2.png'
 import { useEffect, useState } from 'react'
 
+import { useQuery, gql } from '@apollo/client'
+import { LOAD_ALL_USERS } from '../../GraphQL/Queries'
+
 const LogIn = ({ currentUser, handleChange }) => {
 
   const [conditionalLink, setConditionalLink] = useState('/login/')
+
+  const {error, loading, data} = useQuery(LOAD_ALL_USERS)
+
+
+
 
   const userList = users.map(user => {
     return (
@@ -19,6 +27,10 @@ const LogIn = ({ currentUser, handleChange }) => {
   useEffect(() => {
     if (currentUser) {
       setConditionalLink('/seeds/')
+    }
+
+    if (data) {
+      console.log('graphql data:', data)
     }
   }, [currentUser])
 
