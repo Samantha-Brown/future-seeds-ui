@@ -15,8 +15,8 @@ const SeedIndex = ( {currentUserID}) => {
 
   const [userSeeds, setUserSeeds] = useState(null)
   const { error2, loading2, data } = useQuery(
-    LOAD_SELECTED_USER, 
-    { 
+    LOAD_SELECTED_USER,
+    {
       variables: {id: currentUserID}
     }
   )
