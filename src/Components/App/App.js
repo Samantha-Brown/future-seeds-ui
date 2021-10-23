@@ -9,21 +9,12 @@ import JournalIndex from '../JournalIndex/JournalIndex';
 import { useState, useEffect } from 'react'
 
 import { useQuery, gql} from '@apollo/client';
-import { LOAD_ALL_USERS, LOAD_SELECTED_USER } from '../../GraphQL/Queries'
+import { LOAD_ALL_USERS } from '../../GraphQL/Queries'
 
 const App = () => {
   const [currentUserID, setCurrentUserID] = useState(null)
   const [usersList, setUsersList] = useState([])
-  const [selectedUser, setSelectedUser] = useState(null)
   const { error, loading, data } = useQuery(LOAD_ALL_USERS)
-
-  // const { error2, loading2, data } = useQuery(
-  //   LOAD_SELECTED_USER, 
-  //   { 
-  //     variables: {id: 12}
-  //   }
-  // )
-
 
   useEffect(() => {
     if (data) {
@@ -54,7 +45,7 @@ const App = () => {
         </Route>
         <Route exact path='/journal'>
           <JournalIndex
-            selectedUser={ selectedUser }
+            currentUserID={ currentUserID }
             />
         </Route>
       </Switch>
