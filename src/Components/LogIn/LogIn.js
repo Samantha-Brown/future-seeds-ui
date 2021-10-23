@@ -4,7 +4,7 @@ import loginImg from '../../images/login.png'
 import plant2 from '../../images/plant2.png'
 import { useEffect, useState } from 'react'
 
-const LogIn = ({ currentUser, handleChange, usersList  }) => {
+const LogIn = ({ currentUserID, handleChange, usersList  }) => {
 
   const [conditionalLink, setConditionalLink] = useState('/login/')
 
@@ -17,17 +17,17 @@ const LogIn = ({ currentUser, handleChange, usersList  }) => {
   })
 
   useEffect(() => {
-    if (currentUser) {
+    if (currentUserID) {
       setConditionalLink('/seeds/')
     }
-  }, [currentUser])
+  }, [currentUserID])
 
   return (
     <div className='login-container'>
       <img src={plant2} alt='second plant sketch' className='single-plant'/>
       <h3 className='select-name'>Select Your User Name</h3>
       <select className='user-list' onChange={e => handleChange(e.target.value)}>
-        {!currentUser && <option>Click to Expand...</option>}
+        {!currentUserID && <option>Click to Expand...</option>}
         {userList}
       </select>
       <Link to={conditionalLink}>
