@@ -6,6 +6,10 @@ export const LOAD_ALL_USERS = gql`
       firstName
       lastName
       id
+      journalEntries {
+        description
+        date
+      }
     }
   }
 `

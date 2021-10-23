@@ -12,8 +12,9 @@ import { useQuery, gql } from '@apollo/client';
 import { LOAD_ALL_USERS } from '../../GraphQL/Queries'
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState('')
+  const [currentUserID, setCurrentUserID] = useState('')
   const [usersList, setUsersList] = useState([])
+  const [selectedUser, setSelectedUser] = useState({})
   const { error, loading, data } = useQuery(LOAD_ALL_USERS)
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const App = () => {
 
 
   const handleChange = (userID) => {
-    setCurrentUser(userID)
+    setCurrentUserID(userID)
   }
 
   return (
@@ -36,18 +37,18 @@ const App = () => {
         <Route exact path='/login/'>
           <LogIn
             usersList={ usersList }
-            currentUser={ currentUser }
+            currentUserID={ currentUserID }
             handleChange = {handleChange }
             />
           </Route>
         <Route exact path='/seeds'>
           <SeedIndex
-            currentUser={ currentUser }
+            selectedUser={ selectedUser }
             />
         </Route>
         <Route exact path='/journal'>
           <JournalIndex
-            currentUser={ currentUser }
+            selectedUser={ selectedUser }
             />
         </Route>
       </Switch>
