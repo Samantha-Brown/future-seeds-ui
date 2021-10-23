@@ -14,10 +14,6 @@ const SeedIndex = ( {currentUserID}) => {
   // const userSeeds = seeds.filter(seed => seed.user_id === Number(currentUser))
 
   const [userSeeds, setUserSeeds] = useState(null)
-
-  console.log(currentUserID)
-  console.log(typeof(parseInt(currentUserID)))
-
   const { error2, loading2, data } = useQuery(
     LOAD_SELECTED_USER, 
     { 
