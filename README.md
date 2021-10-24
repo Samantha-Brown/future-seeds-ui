@@ -5,6 +5,7 @@
 This application allows users to store data about themselves as users, their seeds, and their garden journal entries to reflect on their gardening techniques and improve their future garden. It was developed on a React frontend application that connects with a Ruby on Rails backend application.
 
 ## Deployed Application
+[View the deployed application on Heroku](https://future-seeds-ui.herokuapp.com/)
 
 ## Demo
 
