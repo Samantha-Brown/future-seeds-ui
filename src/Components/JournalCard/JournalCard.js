@@ -5,7 +5,16 @@ import JournalCards from '../JournalIndex/JournalIndex'
 
 import './JournalCard.css'
 
-const JournalCard = ( {journalCards} ) => {
+const JournalCard = ( { userJournals } ) => {
+
+  const journalCards = userJournals.map(journalEntries => {
+    return (
+      <div className='journal-card' key={userJournals.id}>
+        <h1>{journalEntries.date}</h1>
+        <p>{journalEntries.description}</p>
+      </div>
+    )
+  })
 
   return (
     <div className='journal-container'>

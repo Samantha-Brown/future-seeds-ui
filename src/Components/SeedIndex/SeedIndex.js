@@ -9,8 +9,10 @@ import './SeedIndex.css'
 const SeedIndex = ({ currentUserID }) => {
   const [showForm, setShowForm] = useState(false)
   const [userSeeds, setUserSeeds] = useState(null)
+
   const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER, { variables: {id: currentUserID} });
+
 
   useEffect(() => {
     if (data) {
