@@ -1,7 +1,6 @@
 {
   "data": {
-      "users": [
-          {
+      "user": {
               "firstName": "Dolly",
               "lastName": "Parton",
               "id": "11",
@@ -51,45 +50,6 @@
                       "description": "Do not assume anything Obi-Wan. Clear your mind must be if you are to discover the real villains behind this plot."
                   }
               ]
-          },
-          {
-              "firstName": "Willie",
-              "lastName": "Nelson",
-              "id": "13",
-              "city": "Luebury",
-              "state": "AL",
-              "intentions": "woof woof",
-              "seeds": [
-                  {
-                      "name": "Zucchini",
-                      "daysToGerminate": "6-16 days",
-                      "plantingDepth": "1/2 in",
-                      "timeToHarvest": "43-64 days",
-                      "datePlanted": "2021-02-07",
-                      "expectedPlantHeight": "7-35 in",
-                      "notes": "Never trust anything that can think for itself if you can't see where it keeps its brain."
-                  },
-                  {
-                      "name": "Cabbage",
-                      "daysToGerminate": "1-15 days",
-                      "plantingDepth": "1/6 in",
-                      "timeToHarvest": "44-90 days",
-                      "datePlanted": "2021-04-23",
-                      "expectedPlantHeight": "2-26 in",
-                      "notes": "There are some things you can't share without ending up liking each other, and knocking out a twelve-foot mountain troll is one of them."
-                  }
-              ],
-              "journalEntries": [
-                  {
-                      "date": "2021-12-18",
-                      "description": "Death is a natural part of life. Rejoice for those around you who transform into the Force. Mourn them do not. Miss them do not. Attachment leads to jealously. The shadow of greed, that is."
-                  },
-                  {
-                      "date": "2021-01-12",
-                      "description": "Like fire across the galaxy the Clone Wars spread. In league with the wicked Count Dooku, more and more planets slip. Against this threat, upon the Jedi Knights falls the duty to lead the newly formed army of the Republic. And as the heat of war grows, so, to, grows the prowess of one most gifted student of the Force."
-                  }
-              ]
           }
-      ]
   }
 }
