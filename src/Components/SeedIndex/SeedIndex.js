@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
-import { users, seeds } from '../../data/mockData'
 import SeedCard from '../SeedCard/SeedCard'
 import SeedForm from '../SeedForm/SeedForm'
 import NavBar from '../NavBar/NavBar'
-import plantImage from '../../images/caleb-george.jpg'
 import { useQuery } from '@apollo/client'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 import './SeedIndex.css'
@@ -18,7 +16,7 @@ const SeedIndex = ({ currentUserID }) => {
     if (data) {
       setUserSeeds(data.user.seeds)
     }
-  });
+  }, [data]);
 
   return (
     <div>
