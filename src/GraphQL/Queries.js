@@ -23,7 +23,13 @@ export const LOAD_SELECTED_USER = gql`
       }
       seeds {
         name
+        daysToGerminate
+        plantingDepth
+        timeToHarvest
+        datePlanted
+        expectedPlantHeight
         notes
+        userId
       }
     }
   }
