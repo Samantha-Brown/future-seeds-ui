@@ -23,35 +23,28 @@ const JournalIndex = ( { currentUserID } ) => {
 
   useEffect(() => {
     if (data) {
-      setUserJournals(data)
+      setUserJournals(data.user.journalEntries)
     }
-  })
-
-  // const journalCards = userJournalEntries.map(journalEntries => {
-  //   return (
-  //     <div className='journal-card' key={userJournalEntries.id}>
-  //       <h1>{journalEntries.date}</h1>
-  //       <p>{journalEntries.description}</p>
-  //     </div>
-  //   )
-  // })
-
+  }, [data])
+console.log('Here', userJournals)
   return (
     <div>
     <NavBar/>
-    {// <div className='journal-index'>
-    //   <div>{`Hello, ${userDetails.first_name}`} </div>
-    //   <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
-    //   {showForm && <div>
-    //   <JournalForm />
-    //   </div>}
-    //   <JournalCard
-    //     journalCards={journalCards}
-    //     />
-    // </div>
+    {
+    <div className='journal-index'>
+      <div>{`Hello, ${users.firstName}`} </div>
+      <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
+      {showForm && <div>
+      <JournalForm />
+      </div>}
+      { userJournals && <JournalCard
+        userJournals={userJournals}
+        />}
+    </div>
   }
+
     </div>
   )
 }
-//Needs a submit form functionality next - after BE connection?
+
 export default JournalIndex
