@@ -5,9 +5,7 @@ import SignUp from '../SignUp/SignUp';
 import LogIn from '../LogIn/LogIn';
 import SeedIndex from '../SeedIndex/SeedIndex';
 import JournalIndex from '../JournalIndex/JournalIndex';
-
 import { useState, useEffect } from 'react'
-
 import { useQuery, gql} from '@apollo/client';
 import { LOAD_ALL_USERS } from '../../GraphQL/Queries'
 
@@ -19,7 +17,7 @@ const App = () => {
   useEffect(() => {
     if (data) {
       setUsersList(data)
-    }  
+    }
   }, [data, currentUserID])
 
   const handleChange = (userID) => {
