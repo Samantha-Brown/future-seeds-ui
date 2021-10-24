@@ -3,21 +3,20 @@ describe('Testing stubbing', () => {
     cy.loadUser()
  });
 
- it.skip('should go to localhost', () => {
+ it('should go to localhost', () => {
     cy.url().should('eq', 'http://localhost:3000/')
   });
 
- it.skip('Should confirm that true is equal to true', () => {
+ it('Should confirm that true is equal to true', () => {
        expect(true).to.equal(true)
      });
 
- it.skip('Should show the title', () => {
+ it('Should show the title', () => {
     cy.get('.home-container')
   });
 
- it.skip('Should show the logo', () => {
+ it('Should show the logo', () => {
     cy.loadUser()
     cy.get('.small-logo')
   })
-
 })
