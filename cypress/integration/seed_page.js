@@ -11,6 +11,11 @@ describe('Testing stubbing', () => {
     cy.loadUser();
     cy.get('[href="/login"]').click();
 
-    
+    it('should show dropdown with stubbed data', () => {
+      cy.loadUsers();
+      cy.get('[href="/login"]').click();
+      cy.get('.user-list');
+      cy.contains('Dolly-Parton-11').select('Dolly-Parton-11');
+    });
   });
 });
