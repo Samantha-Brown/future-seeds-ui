@@ -17,6 +17,7 @@ const SeedIndex = ({ currentUserID }) => {
   useEffect(() => {
     if (data) {
       setUserSeeds(data.user.seeds)
+      console.log('data:', data.user.seeds)
     }
   }, [data]);
 
