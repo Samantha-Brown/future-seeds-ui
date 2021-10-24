@@ -19,7 +19,7 @@ Navigate inside the project directory
 
 `cd future-seeds-ui`
 
-Install necessary project dependencies
+Install project dependencies
 
 `npm -i`
 
