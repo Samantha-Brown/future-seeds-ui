@@ -10,9 +10,9 @@ Cypress.Commands.add('interceptAPI', (url) => {
   })
 })
 
-Cypress.Commands.add('interceptSeedAPI', (url) => {
+Cypress.Commands.add('interceptChosenUser', (url) => {
   cy.intercept(`${url}`, {
-    fixture: `user_seeds.json`
+    fixture: `chosen_user_data.json`
   })
 })
 
@@ -24,5 +24,10 @@ Cypress.Commands.add('loadUser', () => {
 
 Cypress.Commands.add('loadSeeds', () => {
   cy.visit('http://localhost:3000/seeds')
-    .interceptSeedAPI('https://future-seeds-api.herokuapp.com/graphql')
+    .interceptChosenUser('https://future-seeds-api.herokuapp.com/graphql')
+})
+
+Cypress.Commands.add('loadJournalEntries', () => {
+  cy.visit('http://localhost:3000/journal')
+    .interceptChosenUser('https://future-seeds-api.herokuapp.com/graphql')
 })
