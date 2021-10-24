@@ -15,57 +15,31 @@ const SeedIndex = ( {currentUserID}) => {
 
   const [userSeeds, setUserSeeds] = useState(null)
   const { error2, loading2, data } = useQuery(
-    LOAD_SELECTED_USER, 
-    { 
+    LOAD_SELECTED_USER,
+    {
       variables: {id: currentUserID}
     }
   )
 
   useEffect(() => {
     if (data) {
-      setUserSeeds(data)
+      setUserSeeds(data.user.seeds)
     }
   })
-
-  // const seedCards = userSeeds.map(userSeeds => {
-  //   return (
-  //     <div className='seed-card' key={userSeeds.id}>
-  //       <h1 className='seed-title'>{userSeeds.name}</h1>
-  //       <div className='noise'></div>
-  //       <div className='plant-info'>
-  //         <img className='plant-image' src={plantImage} alt='green plant with pink background' />
-  //         <div className='plant-text'>
-  //           <ul>{`Plant ${userSeeds.planting_depth} inches deep`}</ul>
-  //           <ul>{`${userSeeds.days_to_germinate} days to germinate`}</ul>
-  //           <ul>{`${userSeeds.expected_plant_height} inches tall`}</ul>
-  //           <ul>{`${userSeeds.sun_exposure} sun`}</ul>
-  //           <ul>{`${userSeeds.time_to_harvest} Days to harvest`}</ul>
-  //           <div className='notes'>
-  //             <ul>Notes:</ul>
-  //             <ul>{userSeeds.notes}</ul>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   )
-  // })
+  console.log(userSeeds)
 
   return (
     <div>
     <NavBar/>
-    {/* <div className='seed-index'>
-      <div>
-      <div>{`Hello, ${userDetails.first_name}`} </div>
-
-      </div>
+    <div className='seed-index'>
       <button onClick= {() => setShowForm(true)}>New Card</button>
       {showForm && <div>
         <SeedForm />
         </div>}
-      <SeedCard
-        seedCards={seedCards}
-        />
-    </div> */}
+      { userSeeds && <SeedCard
+        userSeeds={ userSeeds }
+        /> }
+    </div>
     </div>
   )
 }
