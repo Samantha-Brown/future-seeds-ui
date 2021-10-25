@@ -21,6 +21,9 @@ const SeedIndex = ({ currentUserID }) => {
     }
   }, [data]);
 
+  if (loading) return <p>Loading ...</p>;
+  if (error) return `Error! ${error}`;
+
   return (
     <div>
     <NavBar/>
