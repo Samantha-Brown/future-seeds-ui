@@ -9,6 +9,7 @@ import './SeedIndex.css'
 const SeedIndex = ({ currentUserID }) => {
   const [showForm, setShowForm] = useState(false)
   const [userSeeds, setUserSeeds] = useState(null)
+  const [userPersonalInfo, setUserPersonalInfo] = useState({})
 
   const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER, { variables: {id: currentUserID} });
@@ -17,13 +18,17 @@ const SeedIndex = ({ currentUserID }) => {
   useEffect(() => {
     if (data) {
       setUserSeeds(data.user.seeds)
-      console.log('data:', data.user.seeds)
+      setUserPersonalInfo({ 
+        firstName: data.user.firstName, 
+        lastName: data.user.lastName, 
+        userCity: data.user.city, 
+        userState: data.user.state})
     }
   }, [data]);
 
   return (
     <div>
-    <NavBar/>
+    <NavBar userPersonalInfo={userPersonalInfo}/>
     <div className='seed-index'>
       <button onClick={() => setShowForm(true)}>New Card</button>
       { showForm && <div>
