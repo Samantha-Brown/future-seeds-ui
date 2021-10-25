@@ -16,16 +16,16 @@ describe('Nav Bar Spec', () => {
     });
   })
 
-  it('Should start at seeds page', () => {
+  it.skip('Should start at seeds page', () => {
     cy.url().should('eq', 'http://localhost:3000/seeds')
   })
 
-  it('Should have the nav bar visible', () => {
+  it.skip('Should have the nav bar visible', () => {
     cy.get('.top-home-bar')
       .should('be.visible')
   })
 
-  it('Should show log in and sign up on Nav bar', () => {
+  it.skip('Should show log in and sign up on Nav bar', () => {
     cy.get('.links')
       .should('have.length', 3)
       .first()
@@ -36,14 +36,14 @@ describe('Nav Bar Spec', () => {
       .should('have.text', 'Log Out')
   })
 
-  it('Should be able to click journal link and go to journal page', () => {
+  it.skip('Should be able to click journal link and go to journal page', () => {
     cy.get('.to-journal')
       .click()
 
     cy.url().should('eq', 'http://localhost:3000/journal')
   })
 
-  it('Should be able to go to seeds from journal page', () => {
+  it.skip('Should be able to go to seeds from journal page', () => {
     cy.get('.to-journal')
       .click()
 
@@ -53,7 +53,7 @@ describe('Nav Bar Spec', () => {
     cy.url().should('eq', 'http://localhost:3000/seeds')
   })
 
-  it('Should be able to log out from seeds page', () => {
+  it.skip('Should be able to log out from seeds page', () => {
     cy.get('.to-home')
       .click()
 
