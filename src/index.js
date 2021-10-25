@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
-import { createHttpLink } from '@apollo/client';
 
 const errorLink = onError(({ graphQLErrors, networkError}) => {
   if ( graphQLErrors ) {
