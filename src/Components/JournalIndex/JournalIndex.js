@@ -40,20 +40,17 @@ const JournalIndex = ( { currentUserID } ) => {
 
   return (
     <div>
-    <NavBar/>
-    {
-    <div className='journal-index'>
-      <div>{`Hello, ${users.firstName}`} </div>
-      <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
-      {showForm && <div>
-      <JournalForm />
-      </div>}
-      { userJournals && <JournalCard
-        userJournals={userJournals}
-        />}
-    </div>
-  }
-
+      <NavBar/>
+      <div className='journal-index'>
+        <div>{`Hello, ${users.firstName}`} </div>
+        <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
+        {showForm && <div>
+        <JournalForm />
+        </div>}
+        { userJournals && <JournalCard
+          userJournals={userJournals}
+          />}
+      </div>
     </div>
   )
 }
