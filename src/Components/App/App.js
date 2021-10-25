@@ -4,6 +4,7 @@ import './App.css';
 import SignUp from '../SignUp/SignUp';
 import LogIn from '../LogIn/LogIn';
 import SeedIndex from '../SeedIndex/SeedIndex';
+import Error from '../Error/Error';
 import JournalIndex from '../JournalIndex/JournalIndex';
 import { useState, useEffect } from 'react'
 import { useQuery, gql} from '@apollo/client';
@@ -23,6 +24,10 @@ const App = () => {
   const handleChange = (userID) => {
     setCurrentUserID(userID)
   }
+
+  if (loading) return <p>Loading ...</p>;
+  if (error) return <Error />
+ 
 
   return (
     <main>

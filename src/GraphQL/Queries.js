@@ -15,6 +15,8 @@ export const LOAD_SELECTED_USER = gql`
     user (id: $id) {
       firstName
       lastName
+      city
+      state
       id
       journalEntries {
         description

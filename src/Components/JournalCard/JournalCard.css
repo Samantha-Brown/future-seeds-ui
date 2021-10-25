@@ -1,22 +1,26 @@
 .journal-container {
   display: flex;
+  justify-content: center;
 }
 
+.all-journal-cards {
+  display: flex;
+  justify-content: center;
+}
 .journal-card {
-  color: black;
-  background-color: white;
-  border-radius: 10px;
+  color: #63A958;
+  background-color: #fff7d0;
+  border-radius: 20px;
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.5);
   font-size: 12px;
-  width: 70%;
-  height: 14em;
+  width: 80%;
+  height: 16em;
   display: flex;
   flex-direction: column;
-  align-items: right;
   text-align: center;
-  justify-content: space-around;
   position: relative;
   margin: 5px;
+  justify-content: center;
 }
 
 button {

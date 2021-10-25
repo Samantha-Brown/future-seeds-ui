@@ -2,7 +2,8 @@ import { aliasQuery } from '../utils/graphql-test-utils';
 
 describe('Seed Spec', () => {
 
-beforeEach(() => {
+  beforeEach(() => {
+
     cy.intercept(
       'POST',
       'https://future-seeds-api.herokuapp.com/graphql',
@@ -11,13 +12,12 @@ beforeEach(() => {
       }
     )
 
-  cy.visit('http://localhost:3000/seeds')
-
-  cy.wait('@gqlgetSelectedUserQuery').then((interception) => {
-    expect(interception).to.be.an('object');
-  });
-
+    cy.visit('http://localhost:3000/seeds')
+    cy.wait('@gqlgetSelectedUserQuery').then((interception) => {
+      expect(interception).to.be.an('object');
+    });
   })
+
   it.skip('Should go to Seeds Page', () => {
     cy.url().should('eq', 'http://localhost:3000/seeds')
   })

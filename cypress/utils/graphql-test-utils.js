@@ -1,4 +1,3 @@
-import user_profile from '../fixtures/user_profile.json';
 import user_list from '../fixtures/user_list.json';
 import selected_user_data from '../fixtures/selected_user_data.json';
 
@@ -10,7 +9,6 @@ export const hasOperationName = (req, operationName) => {
     body.hasOwnProperty('operationName') && body.operationName === operationName
     )
   }
-
 
 // Alias Queries
 

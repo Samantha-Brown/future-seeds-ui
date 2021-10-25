@@ -6,65 +6,57 @@ describe('Nav Bar Spec', () => {
       'POST',
       'https://future-seeds-api.herokuapp.com/graphql',
       (req) => {
-        aliasQuery(req, 'getUsers')
+        aliasQuery(req, 'getSelectedUser')
       }
     )
-    cy.visit('http://localhost:3000/')
-    cy.wait('@gqlgetUsersQuery').then((interception) => {
+
+    cy.visit('http://localhost:3000/seeds')
+    cy.wait('@gqlgetSelectedUserQuery').then((interception) => {
       expect(interception).to.be.an('object');
     });
   })
-  it('Should true equal true', () => {
-    expect('true').to.equal('true')
+
+  it('Should start at seeds page', () => {
+    cy.url().should('eq', 'http://localhost:3000/seeds')
   })
 
-  it('Should start at home page', () => {
-    cy.url().should('eq', 'http://localhost:3000/')
+  it('Should have the nav bar visible', () => {
+    cy.get('.top-home-bar')
+      .should('be.visible')
   })
 
   it('Should show log in and sign up on Nav bar', () => {
     cy.get('.links')
-      .should('have.length', 2)
+      .should('have.length', 3)
       .first()
-      .should('have.text', 'Log In')
+      .should('have.text', 'Seeds')
 
     cy.get('.links')
       .last()
-      .should('have.text', 'Sign Up')
+      .should('have.text', 'Log Out')
   })
 
-  it('Should be able to click Log in', () => {
-    cy.get('.log-in')
+  it('Should be able to click journal link and go to journal page', () => {
+    cy.get('.to-journal')
       .click()
 
-    cy.url().should('eq', 'http://localhost:3000/login')
+    cy.url().should('eq', 'http://localhost:3000/journal')
   })
 
-  it('Should be able click signup', () => {
-    cy.get('.sign-up')
+  it('Should be able to go to seeds from journal page', () => {
+    cy.get('.to-journal')
       .click()
 
-  cy.url().should('eq', 'http://localhost:3000/signup')
+    cy.get('.to-seeds')
+      .click()
+
+    cy.url().should('eq', 'http://localhost:3000/seeds')
   })
 
-  // beforeEach(() => {
-  //     cy.intercept(
-  //       'POST',
-  //       'https://future-seeds-api.herokuapp.com/graphql',
-  //       (req) => {
-  //         aliasQuery(req, 'getSelectedUser')
-  //       }
-  //     )
-  //
-  //   cy.visit('http://localhost:3000/seeds')
-  //
-  //   cy.wait('@gqlgetSelectedUserQuery').then((interception) => {
-  //     expect(interception).to.be.an('object');
-  //   });
-  //
-  //   })
-  //
-  //   it.skip('Should go to Seeds Page', () => {
-  //     cy.url().should('eq', 'http://localhost:3000/seeds')
-  //   })
+  it('Should be able to log out from seeds page', () => {
+    cy.get('.to-home')
+      .click()
+
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
 })

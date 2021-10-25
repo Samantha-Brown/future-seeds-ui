@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Error from './Components/Error/Error';
 import App from './Components/App/App'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
-import { createHttpLink } from '@apollo/client';
 
 const errorLink = onError(({ graphQLErrors, networkError}) => {
   if ( graphQLErrors ) {
     graphQLErrors.map(({ message, location, path }) => {
-      return alert(`Graphql error ${message}`)
+      return alert(`GraphQL error ${message}`)
     })
   }
 })
-
 
 const link = from([
   errorLink,
@@ -23,7 +22,10 @@ const link = from([
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: link
+  link: link,
+  fetchOptions: {
+    mode: 'no-cors',
+  }
 })
 
 ReactDOM.render(
