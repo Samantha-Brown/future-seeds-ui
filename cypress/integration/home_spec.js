@@ -15,9 +15,9 @@ describe('Home Spec', () => {
     });
   })
 
-  it('Should confirm that true is equal to true', () => {
-    expect(true).to.equal(true)
-  });
+  it('Should start at home page', () => {
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
 
   it('Should show the title', () => {
     cy.get('.home-container')
@@ -27,12 +27,32 @@ describe('Home Spec', () => {
     cy.get('.small-logo')
   })
 
+  it('Should show log in and sign up on Nav bar', () => {
+    cy.get('.links')
+      .should('have.length', 2)
+      .first()
+      .should('have.text', 'Log In')
+
+    cy.get('.links')
+      .last()
+      .should('have.text', 'Sign Up')
+  })
+
    it('Should be able to go to log-in page', () => {
      cy.get('.log-in')
        .click()
 
-     cy.get('select').select('Dolly-Parton-11').should('have.value', 11 )
+    cy.url().should('eq', 'http://localhost:3000/login')
 
-     cy.get('.menu-btn-login').click()
+     // cy.get('select').select('Dolly-Parton-11').should('have.value', 11 )
+     //
+     // cy.get('.menu-btn-login').click()
+   })
+
+  it('Should be able click signup', () => {
+     cy.get('.sign-up')
+       .click()
+
+   cy.url().should('eq', 'http://localhost:3000/signup')
    })
 })

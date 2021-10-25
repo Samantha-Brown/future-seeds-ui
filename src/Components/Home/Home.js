@@ -13,7 +13,7 @@ const Home = () => {
         <img src={boxLogo} alt='small logo' className='small-logo'/>
         <div className='home-links'>
           <Link to='/login' className='links log-in' style={{ textDecoration: 'none' }}>Log In</Link>
-          <Link to='signup' className='links' style={{ textDecoration: 'none' }}>Sign Up</Link>
+          <Link to='signup' className='links sign-up' style={{ textDecoration: 'none' }}>Sign Up</Link>
         </div>
       </div>
       <div className='home-line'></div>
