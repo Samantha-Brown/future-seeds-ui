@@ -24,6 +24,9 @@ const App = () => {
     setCurrentUserID(userID)
   }
 
+  if (loading) return <p>Loading ...</p>;
+  if (error) return `Error! ${error}`;
+  
   return (
     <main>
       <Switch>
