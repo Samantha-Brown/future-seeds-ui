@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import SeedCard from '../SeedCard/SeedCard'
 import SeedForm from '../SeedForm/SeedForm'
 import NavBar from '../NavBar/NavBar'
+import Error from '../Error/Error'
 import { useQuery } from '@apollo/client'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 import './SeedIndex.css'
@@ -22,7 +23,14 @@ const SeedIndex = ({ currentUserID }) => {
   }, [data]);
 
   if (loading) return <p>Loading ...</p>;
-  if (error) return `Error! ${error}`;
+  if (error) {
+    return(
+      <>
+        `Error! ${error}`
+        <Error />
+      </>
+    )
+  };
 
   return (
     <div>
