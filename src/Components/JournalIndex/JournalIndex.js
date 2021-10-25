@@ -6,15 +6,17 @@ import JournalForm from '../JournalForm/JournalForm'
 import NavBar from '../NavBar/NavBar'
 import './JournalIndex.css'
 import { useQuery } from '@apollo/client'
+import Error from '../Error/Error'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 
 const JournalIndex = ( { currentUserID } ) => {
   //const userDetails = users.find(user => user.id === Number(currentUser))
   const [showForm, setShowForm] = useState(false)
+  const [userPersonalInfo, setUserPersonalInfo] = useState({})
   //const userJournalEntries = journalEntries.filter(entry => entry.user_id ===Number(currentUser))
 
   const [userJournals, setUserJournals] = useState(null)
-  const { error2, loading2, data } = useQuery(
+  const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER,
     {
       variables: {id: currentUserID}
@@ -24,25 +26,38 @@ const JournalIndex = ( { currentUserID } ) => {
   useEffect(() => {
     if (data) {
       setUserJournals(data.user.journalEntries)
+      setUserPersonalInfo({ 
+        firstName: data.user.firstName, 
+        lastName: data.user.lastName, 
+        userCity: data.user.city, 
+        userState: data.user.state})
     }
   }, [data])
-console.log('Here', userJournals)
+
+
+  if (loading) return <p>Loading ...</p>;
+  if (error) {
+    return(
+      <>
+        `Error! ${error}`
+        <Error />
+      </>
+    )
+  };
+
   return (
     <div>
-    <NavBar/>
-    {
-    <div className='journal-index'>
-      <div>{`Hello, ${users.firstName}`} </div>
-      <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
-      {showForm && <div>
-      <JournalForm />
-      </div>}
-      { userJournals && <JournalCard
-        userJournals={userJournals}
-        />}
-    </div>
-  }
-
+      <NavBar/>
+      <div className='journal-index'>
+        <div>{`Hello, ${users.firstName}`} </div>
+        <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
+        {showForm && <div>
+        <JournalForm />
+        </div>}
+        { userJournals && <JournalCard
+          userJournals={userJournals}
+          />}
+      </div>
     </div>
   )
 }
