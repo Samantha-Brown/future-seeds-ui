@@ -26,14 +26,8 @@ const App = () => {
   }
 
   if (loading) return <p>Loading ...</p>;
-  if (error) {
-    return(
-      <>
-        `Error! ${error}`
-        <Error />
-      </>
-    )
-  };
+  if (error) return <Error />
+ 
 
   return (
     <main>
