@@ -1,6 +1,6 @@
 .seed-index {
 
-  /* width: 100%; */
+  width: 100%;
 }
 .seed-title {
   font-family: 'Paytone One', sans-serif;
@@ -44,8 +44,9 @@
 }
 
 .plant-image {
-  width: 30%;
-  margin: 0;
+  width: 25%;
+  height: 105%;
+  margin-left: 5%;
 }
 
 .plant-text {
