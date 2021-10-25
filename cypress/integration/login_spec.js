@@ -19,26 +19,26 @@ describe('Log in Spec', () => {
       .click()
   })
 
-  it('Should be able to go to log in page', () => {
+  it.skip('Should be able to go to log in page', () => {
     cy.url().should('eq', 'http://localhost:3000/login')
   })
 
-  it('Should have mocked data populated', () => {
+  it.skip('Should have mocked data populated', () => {
     cy.get('select').select('Dolly-Parton-11').should('have.value', 11 )
   })
 
-  it('Should be able to log in and show user\'s data', () => {
+  it.skip('Should be able to log in and show user\'s data', () => {
     cy.get('select').select('Dolly-Parton-11').should('have.value', 11 )
     cy.get('.menu-btn-login').click()
     cy.url().should('eq', 'http://localhost:3000/seeds/')
   })
 
-  it('Should be able to return home from log-in', () => {
+  it.skip('Should be able to return home from log-in', () => {
     cy.get('[href="/"]').click()
     cy.url().should('eq', 'http://localhost:3000/')
   })
 
-  it('Should be able to go to sign up from log-in', () => {
+  it.skip('Should be able to go to sign up from log-in', () => {
     cy.get('[href="/signup/"] > .new-user-prompt')
       .click()
     cy.url().should('eq', 'http://localhost:3000/signup/')
