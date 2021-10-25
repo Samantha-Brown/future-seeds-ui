@@ -26,7 +26,10 @@ const JournalIndex = ( { currentUserID } ) => {
       setUserJournals(data.user.journalEntries)
     }
   }, [data])
-console.log('Here', userJournals)
+
+  if (loading) return <p>Loading ...</p>;
+  if (error) return `Error! ${error}`;
+
   return (
     <div>
     <NavBar/>
