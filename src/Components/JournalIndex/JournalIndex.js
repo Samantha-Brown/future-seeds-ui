@@ -9,16 +9,10 @@ import { useQuery } from '@apollo/client'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 
 const JournalIndex = ( { currentUserID } ) => {
-  //const userDetails = users.find(user => user.id === Number(currentUser))
   const [showForm, setShowForm] = useState(false)
-  //const userJournalEntries = journalEntries.filter(entry => entry.user_id ===Number(currentUser))
-
   const [userJournals, setUserJournals] = useState(null)
   const { error2, loading2, data } = useQuery(
-    LOAD_SELECTED_USER,
-    {
-      variables: {id: currentUserID}
-    }
+    LOAD_SELECTED_USER, { variables: {id: currentUserID}
   )
 
   useEffect(() => {
@@ -26,23 +20,18 @@ const JournalIndex = ( { currentUserID } ) => {
       setUserJournals(data.user.journalEntries)
     }
   }, [data])
-console.log('Here', userJournals)
+
   return (
     <div>
-    <NavBar/>
-    {
-    <div className='journal-index'>
-      <div>{`Hello, ${users.firstName}`} </div>
-      <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
-      {showForm && <div>
-      <JournalForm />
-      </div>}
-      { userJournals && <JournalCard
-        userJournals={userJournals}
-        />}
-    </div>
-  }
-
+      <NavBar/>
+      <div className='journal-index'>
+        <div>{ `Hello, ${users.firstName}` }</div>
+        <button onClick= { () => setShowForm(true) }>Add New Journal Entry</button>
+        { showForm && <div> <JournalForm /> </div> }
+        { userJournals && <JournalCard
+          userJournals={userJournals}
+          /> }
+      </div>
     </div>
   )
 }
