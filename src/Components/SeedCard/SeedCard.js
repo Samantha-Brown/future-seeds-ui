@@ -17,7 +17,7 @@ const SeedCard = ({ userSeeds }) => {
             <ul>{`${ userSeeds.sunExposure }`}</ul>
             <ul>{`${ userSeeds.timeToHarvest } to harvest`}</ul>
             <div className='notes'>
-              <ul>Notes:</ul>
+              <ul className='notes-text'>Notes:</ul>
               <ul>{ userSeeds.notes }</ul>
             </div>
           </div>
