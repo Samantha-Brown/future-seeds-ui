@@ -10,9 +10,8 @@ import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 const JournalIndex = ( { currentUserID } ) => {
   const [showForm, setShowForm] = useState(false)
   const [userPersonalInfo, setUserPersonalInfo] = useState({})
-  //const userJournalEntries = journalEntries.filter(entry => entry.user_id ===Number(currentUser))
-
   const [userJournals, setUserJournals] = useState(null)
+
   const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER,
     {
@@ -29,9 +28,10 @@ const JournalIndex = ( { currentUserID } ) => {
         userCity: data.user.city,
         userState: data.user.state})
     }
-  }, [data])
+  }, [data]);
 
   if (loading) return <p>Loading ...</p>;
+
   if (error) {
     return(
       <>
@@ -43,16 +43,17 @@ const JournalIndex = ( { currentUserID } ) => {
 
   return (
     <div>
-       <NavBar userPersonalInfo={userPersonalInfo}/>
-      <div className='journal-index'>
-        {/*<div>{`Hello, ${users.firstName}`} </div>*/}
-        <button onClick= {() => setShowForm(true)}>Add New Journal Entry</button>
-        {showForm && <div>
-        <JournalForm />
-        </div>}
+       <NavBar userPersonalInfo={ userPersonalInfo }/>
+       <div className='journal-index'>
+       <button onClick= { () => setShowForm(true) }>Add New Journal Entry</button>
+       { showForm &&
+          <div>
+            <JournalForm />
+          </div> }
         { userJournals && <JournalCard
-          userJournals={userJournals}
-          />}
+          userJournals={ userJournals }
+          key={ userJournals.date }
+          /> }
       </div>
     </div>
   )
