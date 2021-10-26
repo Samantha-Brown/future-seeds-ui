@@ -39,14 +39,15 @@ const SeedIndex = ({ currentUserID }) => {
   return (
     <div className='main-seed-div'>
       <NavBar userPersonalInfo={ userPersonalInfo }/>
-          { !showForm && <button className='show-form' onClick={ () => setShowForm(true) }>New Seed</button>}
-        <div className='seed-index'>
-          { showForm && <div>
+          { !showForm && <button className='show-form' onClick={ () => setShowForm(true) }>New Seed</button> }
+      <div className='seed-index'>
+        { showForm &&
+          <div>
             <SeedForm
               showForm={ showForm }
               />
-              </div> }
-              <h1 className='form-header seed-header'> Collected Seeds:</h1>
+          </div> }
+        <h1 className='form-header seed-header'> Collected Seeds:</h1>
         { userSeeds && <SeedCard
             userSeeds={ userSeeds }
           /> }
