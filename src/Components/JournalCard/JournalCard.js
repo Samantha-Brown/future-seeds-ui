@@ -5,8 +5,8 @@ const JournalCard = ({ userJournals, key }) => {
 
   const journalCards = userJournals.map(journalEntries => {
     return (
-      <div className='all-journal-cards'>
-      <div className='journal-card' key={ key } >
+      <div className='all-journal-cards' key={ key }>
+      <div className='journal-card'  >
         <h1>{ dayjs(journalEntries.date).format('MMMM DD, YYYY') }</h1>
         <p>{ journalEntries.description }</p>
       </div>

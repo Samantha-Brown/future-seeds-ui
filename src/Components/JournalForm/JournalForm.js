@@ -2,11 +2,10 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
 import { CREATE_JOURNAL_MUTATION } from "../../GraphQL/Mutations";
 import './JournalForm.css'
-import { useEffect } from "react";
 
 const JournalForm = ({ userId, handleChange }) => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const [createJournalEntry, { data, error }] = useMutation(CREATE_JOURNAL_MUTATION)
+  const [createJournalEntry, { error }] = useMutation(CREATE_JOURNAL_MUTATION)
 
   
 
