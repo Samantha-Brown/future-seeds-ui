@@ -10,10 +10,15 @@
   }
 
   .seed-container {
-    display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    /* display: grid; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid green;
+    /* grid-template-rows: repeat(3, 1fr);
+    border: 2px solid blue; */
     /* flex-wrap: wrap; */
     /* justify-content: flex-start; */
     width: 100%;
+    max-height: 50%;
   }
 }

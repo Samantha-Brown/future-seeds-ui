@@ -1,3 +1,4 @@
+
 .input-date {
   font-size: 20px
 }
@@ -15,5 +16,24 @@
   text-align: center;
   justify-content: space-around;
   position: relative;
+
+  }
+
+  @media screen and (min-width: 768px) {
+    .main-journal-div {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .journal-index {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid blue;
+      margin: 0;
+      padding: 0;
+    }
 
   }
