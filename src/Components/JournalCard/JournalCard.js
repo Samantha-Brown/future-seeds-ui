@@ -4,14 +4,14 @@ import JournalCards from '../JournalIndex/JournalIndex'
 
 import './JournalCard.css'
 
-const JournalCard = ( { userJournals } ) => {
+const JournalCard = ({ userJournals }) => {
 
   const journalCards = userJournals.map(journalEntries => {
     return (
       <div className='all-journal-cards'>
-      <div className='journal-card' key={userJournals.id}>
-        <h1>{journalEntries.date}</h1>
-        <p>{journalEntries.description}</p>
+      <div className='journal-card' key={ userJournals.id }>
+        <h1>{ journalEntries.date }</h1>
+        <p>{ journalEntries.description }</p>
       </div>
       </div>
     )
@@ -19,7 +19,7 @@ const JournalCard = ( { userJournals } ) => {
 
   return (
     <div className='journal-container'>
-      <div>{journalCards} </div>
+      <div>{ journalCards } </div>
     </div>
   )
 }
