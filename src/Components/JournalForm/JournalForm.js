@@ -3,6 +3,7 @@ import './JournalForm.css'
 
 const JournalForm = () => {
 const { register, handleSubmit, watch, formState: { errors } } = useForm();
+const onSubmit = data => console.log(data)
 
   return (
     <div className='journal-form-container'>

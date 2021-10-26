@@ -1,15 +1,11 @@
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import JournalCards from '../JournalIndex/JournalIndex'
-
 import './JournalCard.css'
 
-const JournalCard = ({ userJournals }) => {
+const JournalCard = ({ userJournals, key }) => {
 
   const journalCards = userJournals.map(journalEntries => {
     return (
       <div className='all-journal-cards'>
-      <div className='journal-card' key={ userJournals.id }>
+      <div className='journal-card' key={ key } >
         <h1>{ journalEntries.date }</h1>
         <p>{ journalEntries.description }</p>
       </div>
