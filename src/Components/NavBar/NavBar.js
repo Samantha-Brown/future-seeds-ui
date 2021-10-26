@@ -4,7 +4,7 @@ import boxLogo from '../../images/fs.png';
 
 const NavBar = ({ userPersonalInfo }) => {
   return (
-    <div>
+    <div className='nav-container'>
       <div className="top-home-bar">
         <div className="left-nav">
           <img src={ boxLogo } alt="small logo" className="small-logo" />

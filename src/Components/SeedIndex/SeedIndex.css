@@ -3,7 +3,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  border: 2px solid blue;
 }
+
 .seed-header {
   align-items: flex-start;
   margin-left: 5%;
@@ -78,4 +80,22 @@
 
 .show-form:hover {
   background: #eb2f06;
+}
+
+@media screen and (min-width: 768px) {
+  /* .seed-index {
+    width: 100%;
+    display: flex;
+    align-items: row;
+    /* flex-direction: column; */
+  .main-seed-div {
+    width: 100%;
+    margin: 0;
+  }
+
+  .seed-card {
+    width: 300px;
+    height: 275px;
+
+  }
 }
