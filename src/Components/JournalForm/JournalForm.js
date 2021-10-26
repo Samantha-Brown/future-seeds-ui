@@ -11,7 +11,7 @@ const onSubmit = data => console.log(data)
       <form className='journal-form' onSubmit={ handleSubmit(onSubmit) }>
         <input placeholder='Date' className='input-date' { ...register('date') } />
         <input placeholder='Description' className='input-description' { ...register('description') } />
-        <input type='submit' className='entry-btn' />
+        <input type='submit' className='new-entry-btn' />
       </form>
     </div>
   )

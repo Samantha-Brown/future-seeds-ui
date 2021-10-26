@@ -45,11 +45,12 @@ const JournalIndex = ( { currentUserID } ) => {
     <div>
        <NavBar userPersonalInfo={ userPersonalInfo }/>
        <div className='journal-index'>
-       <button onClick= { () => setShowForm(true) }>Add New Journal Entry</button>
+       <button className="show-form" onClick= { () => setShowForm(true) }>Add New Journal Entry</button>
        { showForm &&
           <div>
             <JournalForm />
           </div> }
+                  <h1 className='form-header seed-header'>Seed Journals:</h1>
         { userJournals && <JournalCard
           userJournals={ userJournals }
           key={ userJournals.date }

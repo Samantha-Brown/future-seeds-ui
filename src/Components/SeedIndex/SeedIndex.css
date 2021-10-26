@@ -1,5 +1,13 @@
 .seed-index {
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.seed-header {
+  align-items: flex-start;
+  margin-left: 3%;
+  width: 100%;
 }
 
 .seed-title {
@@ -52,4 +60,22 @@
   height: 100px;
   width: 150px;
   margin-top: 5%;
+}
+
+.show-form{
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 80%;
+  outline: none;
+  background: #b71540;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  margin-left: 85%;
+}
+
+.show-form:hover {
+  background: #eb2f06;
 }

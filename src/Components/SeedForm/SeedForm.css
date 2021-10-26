@@ -20,11 +20,19 @@
   z-index: 2;
 }
 
-.signup-btn {
-  max-width: 25vh;
-  height: auto;
-  margin: 3vw;
-  text-decoration: none;
+.new-entry-btn {
+  display: inline-block;
+   padding: 0.3em 1.2em;
+   margin: 0 0.3em 0.3em 0;
+   border-radius: 2em;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Roboto',sans-serif;
+   font-weight: 300;
+   color: #FFFFFF;
+   background-color: #4eb5f1;
+   text-align: center;
+   transition: all 0.2s;
 }
 
 .form-header {
