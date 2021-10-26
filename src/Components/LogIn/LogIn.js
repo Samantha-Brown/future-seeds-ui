@@ -29,13 +29,13 @@ const LogIn = ({ currentUserID, handleChange, usersList }) => {
       <h3 className="select-name">Select Your User Name</h3>
       <select
         className="user-list"
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={ (e) => handleChange(e.target.value) }
       >
         {!currentUserID && <option>Click to Expand...</option>}
-        {userList}
+        { userList }
       </select>
       <Link to={conditionalLink}>
-        <img src={loginImg} className="menu-btn-login" alt="log in btn" />
+        <img src={ loginImg } className="menu-btn-login" alt="log in btn" />
       </Link>
       <Link to="/signup/" style={{ textDecoration: 'none' }}>
         <h4 className="new-user-prompt">New User? Sign Up Here</h4>

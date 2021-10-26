@@ -12,7 +12,7 @@ const StateList = ({ handleLocationChange }) => {
   return (
     <select
       className="input-signup"
-      onChange={(e) => handleLocationChange(e.target.value)}
+      onChange={ (e) => handleLocationChange(e.target.value) }
     >
       { stateListings }
     </select>
