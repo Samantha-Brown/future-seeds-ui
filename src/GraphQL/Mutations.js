@@ -8,22 +8,24 @@ export const CREATE_USER_MUTATION = gql`
     $state: String!
     $intentions: String!
   ){
-    createUser(input: {
+    createUser(
         firstName: $firstName
         lastName: $lastName
         city: $city
         state: $state
         intentions: $intentions
-      })
+      )
       {
       firstName
       lastName
       city
       state
       intentions
+      id
     }
   }
 `
 
 // line 19-23 is the spot what happens after the mutation
 // what is returned
+// need to return id
