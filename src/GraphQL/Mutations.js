@@ -21,9 +21,29 @@ export const CREATE_USER_MUTATION = gql`
       city
       state
       intentions
+      id
     }
   }
 `
 
 // line 19-23 is the spot what happens after the mutation
 // what is returned
+
+export const CREATE_JOURNAL_MUTATION = gql`
+  mutation (
+    $userId: ID!
+    $date: String!
+    $description: String!
+  ){
+    createJournalEntry(input: {
+        userId: $userId
+        date: $date
+        description: $description
+      })
+      {
+      userId
+      date
+      description
+    }
+  }
+`
