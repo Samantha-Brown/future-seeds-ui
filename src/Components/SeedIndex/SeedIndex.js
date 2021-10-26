@@ -18,10 +18,10 @@ const SeedIndex = ({ currentUserID }) => {
   useEffect(() => {
     if (data) {
       setUserSeeds(data.user.seeds)
-      setUserPersonalInfo({ 
-        firstName: data.user.firstName, 
-        lastName: data.user.lastName, 
-        userCity: data.user.city, 
+      setUserPersonalInfo({
+        firstName: data.user.firstName,
+        lastName: data.user.lastName,
+        userCity: data.user.city,
         userState: data.user.state})
     }
   }, [data]);
@@ -38,16 +38,16 @@ const SeedIndex = ({ currentUserID }) => {
 
   return (
     <div>
-    <NavBar userPersonalInfo={userPersonalInfo}/>
-    <div className='seed-index'>
-      <button onClick={() => setShowForm(true)}>New Card</button>
-      { showForm && <div>
-        <SeedForm />
-        </div> }
-      { userSeeds && <SeedCard
-        userSeeds={ userSeeds }
-        /> }
-    </div>
+      <NavBar userPersonalInfo={ userPersonalInfo }/>
+      <div className='seed-index'>
+        <button onClick={ () => setShowForm(true) }>New Card</button>
+        { showForm && <div>
+          <SeedForm />
+          </div> }
+        { userSeeds && <SeedCard
+          userSeeds={ userSeeds }
+          /> }
+      </div>
     </div>
   )
 };
