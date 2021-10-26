@@ -29,6 +29,7 @@ export const LOAD_SELECTED_USER = gql`
         timeToHarvest
         datePlanted
         expectedPlantHeight
+        sunExposure
         notes
       }
     }
