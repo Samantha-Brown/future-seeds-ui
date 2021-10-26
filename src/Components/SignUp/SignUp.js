@@ -5,12 +5,34 @@ import './SignUp.css'
 
 import signUp from '../../images/signup.png'
 
+import { CREATE_USER_MUTATION } from '../../GraphQL/Mutations'
+import { useMutation } from '@apollo/client'
+
+
 const SignUp = () => {
   const [userFirstName, setUserFirstName] = useState('')
   const [userLastName, setUserLastName] = useState('')
   const [userCity, setUserCity] = useState('')
   const [userState, setUserState] = useState('AL')
   const [userIntentions, setUserIntentions] = useState('')
+
+  const [createUser, { error }] = useMutation(CREATE_USER_MUTATION)
+
+  const addUser = () => {
+    createUser({
+      variables: {
+        firstName: userFirstName,
+        lastName: userLastName,
+        city: userCity,
+        state: userState,
+        intentions: userIntentions
+      }
+    })
+  }
+
+  if (!error) {
+    console.log(error)
+  }
 
   const handleLocationChange = (location) => {
     setUserState(location)
@@ -54,7 +76,7 @@ const SignUp = () => {
           resize='none'
         />
       </div>
-      <img src={signUp} alt='sign up' className='signup-btn'/>
+      <img src={signUp} alt='sign up' className='signup-btn' onClick={ () => { addUser() } }/>
       <Link to='/' style={{ textDecoration: 'none' }}>
         <h4 className='new-user-prompt'>Go Back Home</h4>
       </Link>
