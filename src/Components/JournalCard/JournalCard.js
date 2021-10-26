@@ -7,8 +7,8 @@ const JournalCard = ({ userJournals, key }) => {
     return (
       <div className='all-journal-cards'>
       <div className='journal-card' key={ key } >
-        <h1>{ dayjs(journalEntries.date).format('MMMM DD, YYYY') }</h1>
-        <p>{ journalEntries.description }</p>
+        <h1 className='date-text'>{ dayjs(journalEntries.date).format('MMMM DD, YYYY') }</h1>
+        <p className='journal-text'>{ journalEntries.description }</p>
       </div>
       </div>
     )

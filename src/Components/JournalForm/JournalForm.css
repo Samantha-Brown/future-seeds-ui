@@ -7,16 +7,15 @@
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.2);
   background-color: rgba(3, 206, 36, 0.3);
   z-index: -1;
-  width: 400px;
-  margin: auto;
-  margin: 5% auto 5% auto;
+  width: 390px;
+  margin: 2%;
 }
 
 .journal-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 5%;
+  /* margin: 5%; */
   align-items: center;
 }
 

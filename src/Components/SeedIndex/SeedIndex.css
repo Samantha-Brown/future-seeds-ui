@@ -6,7 +6,7 @@
 }
 .seed-header {
   align-items: flex-start;
-  margin-left: 3%;
+  margin-left: 5%;
   width: 100%;
 }
 
@@ -73,7 +73,7 @@
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   font-size: 12px;
-  margin-left: 85%;
+  margin: 3% auto 0 80%;
 }
 
 .show-form:hover {

@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .top-home-bar {
-  height: 10vh;
-  width: 100vw;
+  height: 15%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -16,16 +16,24 @@
 .home-links {
   display: flex;
   align-items: flex-end;
+  justify-content: space-around;
+  margin: 2% 3% 0 3%;
+  /* width: 12%; */
+  width: 30%;
+
 }
 
 .links {
-  margin: 7px;
+  /* margin: 7px; */
   color: black;
 }
+.log-in {
+  /* margin-right: 7%; */
+}
 
-.home-line{
-  width: 93vw;
-  margin: 3px;
+.home-line {
+  width: 93%;
+  margin: 1% 3% 2% 3%;
   border-top: 1px solid rgba(96, 96, 96, 0.379);
   border-bottom: 1px solid rgba(96, 96, 96, 0.379);
 }
@@ -33,29 +41,31 @@
 .small-logo {
   height: 8vh;
   border: 1px solid black;
-  margin: 5px;
+  margin: 1% 3% 0 3%;
 }
 
 .main-title {
   height: 55vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .big-logo {
-  width: 70vw;
+  width: 70%;
+  margin-left: 5%;
 }
 
 .bottom-home {
-  height: 35vh;
-  width: 100vw;
+  height: 30%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
 .mission {
-  width: 30vw;
-  height: 18vh;
-  margin-top: 15px;
+  /* width: 30vw; */
+  width: 40%;
+  height: 20%;
+  margin: 0% 3% 2% 3%;
   border-bottom: 1px solid rgba(96, 96, 96, 0.379);
 }
 

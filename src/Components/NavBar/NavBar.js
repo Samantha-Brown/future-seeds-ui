@@ -17,7 +17,7 @@ const NavBar = ({ userPersonalInfo }) => {
             </p>
           </div>
         </div>
-        <div className="home-links">
+        <div className="home-links nav-link">
           <Link
             to="/seeds"
             className="links to-seeds"
