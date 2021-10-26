@@ -1,6 +1,7 @@
 .seed-index {
   width: 100%;
 }
+
 .seed-title {
   font-family: 'Paytone One', sans-serif;
 }
@@ -38,7 +39,6 @@
   flex-direction: column;
   align-items: flex-end;
   padding-left: 10%;
-  /* padding-right: 3%; */
 }
 
 .notes-text {
