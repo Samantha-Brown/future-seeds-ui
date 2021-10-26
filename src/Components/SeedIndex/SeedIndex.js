@@ -15,7 +15,6 @@ const SeedIndex = ({ currentUserID }) => {
   const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER, { variables: {id: currentUserID} });
 
-
   useEffect(() => {
     if (data) {
       setUserSeeds(data.user.seeds)

@@ -17,9 +17,10 @@ return (
         </div>
       </div>
       <div className='home-links'>
-        <Link to='/seeds' className='links' style={{ textDecoration: 'none' }}>Seeds</Link>
-        <Link to='/journal' className='links' style={{ textDecoration: 'none' }}>Journal</Link>
-          <Link to='/' className='links' style={{ textDecoration: 'none' }}>Log Out</Link>
+
+        <Link to='/seeds' className='links to-seeds' style={{ textDecoration: 'none' }}>Seeds</Link>
+        <Link to='/journal' className='links to-journal' style={{ textDecoration: 'none' }}>Journal</Link>
+          <Link to='/' className='links to-home' style={{ textDecoration: 'none' }}>Log Out</Link>
       </div>
     </div>
     <div className='home-line'></div>
@@ -27,4 +28,4 @@ return (
   )
 }
 
-export default NavBar
+export default NavBar;

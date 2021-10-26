@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const LOAD_ALL_USERS = gql`
-  {
+  query getUsers {
     users {
       firstName
       lastName
@@ -11,7 +11,7 @@ export const LOAD_ALL_USERS = gql`
 `
 
 export const LOAD_SELECTED_USER = gql`
-  query ($id: ID!) {
+  query getSelectedUser ($id: ID!) {
     user (id: $id) {
       firstName
       lastName
@@ -21,7 +21,6 @@ export const LOAD_SELECTED_USER = gql`
       journalEntries {
         description
         date
-        id
       }
       seeds {
         name
@@ -31,7 +30,6 @@ export const LOAD_SELECTED_USER = gql`
         datePlanted
         expectedPlantHeight
         notes
-        userId
       }
     }
   }

@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react'
 const LogIn = ({ currentUserID, handleChange, usersList  }) => {
 
   const [conditionalLink, setConditionalLink] = useState('/login/')
-
   const { users } = usersList;
 
   const userList = users.map(user => {
