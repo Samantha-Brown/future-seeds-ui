@@ -44,6 +44,7 @@ export const CREATE_JOURNAL_MUTATION = gql`
       userId
       date
       description
+      id
     }
   }
 `
