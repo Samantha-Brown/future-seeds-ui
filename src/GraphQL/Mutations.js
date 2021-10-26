@@ -8,14 +8,14 @@ export const CREATE_USER_MUTATION = gql`
     $state: String!
     $intentions: String!
   ){
-    createUser(input: {
+    createUser(
         firstName: $firstName
         lastName: $lastName
         city: $city
         state: $state
         intentions: $intentions
-      })
-      {
+      )
+    {
       firstName
       lastName
       city
@@ -35,12 +35,12 @@ export const CREATE_JOURNAL_MUTATION = gql`
     $date: String!
     $description: String!
   ){
-    createJournalEntry(input: {
+    createJournalEntry(
         userId: $userId
         date: $date
         description: $description
-      })
-      {
+      )
+    {
       userId
       date
       description

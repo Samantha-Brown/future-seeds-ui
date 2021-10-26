@@ -15,7 +15,7 @@ const JournalIndex = ( { currentUserID } ) => {
   const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER,
     {
-      variables: {id: currentUserID}
+      variables: { id: currentUserID }
     }
   )
 
@@ -48,7 +48,7 @@ const JournalIndex = ( { currentUserID } ) => {
        <button onClick= { () => setShowForm(true) }>Add New Journal Entry</button>
        { showForm &&
           <div>
-            <JournalForm />
+            <JournalForm userId={ currentUserID }/>
           </div> }
         { userJournals && <JournalCard
           userJournals={ userJournals }
