@@ -40,12 +40,14 @@ const SeedIndex = ({ currentUserID }) => {
     <div>
       <NavBar userPersonalInfo={ userPersonalInfo }/>
       <div className='seed-index'>
-        <button onClick={ () => setShowForm(true) }>New Card</button>
+        { !showForm && <button onClick={ () => setShowForm(true) }>New Card</button>}
         { showForm && <div>
-          <SeedForm />
+          <SeedForm
+            showForm={ showForm }
+            />
           </div> }
         { userSeeds && <SeedCard
-          userSeeds={ userSeeds }
+            userSeeds={ userSeeds }
           /> }
       </div>
     </div>
