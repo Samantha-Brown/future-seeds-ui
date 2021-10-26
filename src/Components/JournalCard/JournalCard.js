@@ -1,4 +1,5 @@
 import './JournalCard.css'
+const dayjs = require('dayjs');
 
 const JournalCard = ({ userJournals, key }) => {
 
@@ -6,7 +7,7 @@ const JournalCard = ({ userJournals, key }) => {
     return (
       <div className='all-journal-cards'>
       <div className='journal-card' key={ key } >
-        <h1>{ journalEntries.date }</h1>
+        <h1>{ dayjs(journalEntries.date).format('MMMM DD, YYYY') }</h1>
         <p>{ journalEntries.description }</p>
       </div>
       </div>
