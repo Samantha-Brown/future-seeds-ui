@@ -34,7 +34,16 @@ Run the application
 - 
 
 ## Future Add-ons
-- 
+- OAuth for User login 
+- Sorting features on seeds (by height size, days to harvest, germination length, sun to shady, etc)
+- User will be able to see upcoming weather
+- User will be able to get weather alerts
+- User will have a calendar of seed progressions and when they will be sprouting / ready to harvest 
+- Users will be able to add a plot and its attributes
+- User will be able to include expected vs actual growth for the journal 
+- User will be prompted to fill out an end of month journal summary 
+- Users will be able to see all other users specific plant informatio
+
 
 ## Contributors
 ### Frontend contributors
