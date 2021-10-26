@@ -17,6 +17,7 @@ return (
         </div>
       </div>
       <div className='home-links'>
+
         <Link to='/seeds' className='links to-seeds' style={{ textDecoration: 'none' }}>Seeds</Link>
         <Link to='/journal' className='links to-journal' style={{ textDecoration: 'none' }}>Journal</Link>
           <Link to='/' className='links to-home' style={{ textDecoration: 'none' }}>Log Out</Link>

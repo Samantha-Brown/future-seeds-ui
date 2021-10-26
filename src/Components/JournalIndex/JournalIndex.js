@@ -20,7 +20,7 @@ const JournalIndex = ( { currentUserID } ) => {
     }
   )
 
-  useEffect(() => {
+ useEffect(() => {
     if (data) {
       setUserJournals(data.user.journalEntries)
       setUserPersonalInfo({
@@ -30,7 +30,6 @@ const JournalIndex = ( { currentUserID } ) => {
         userState: data.user.state})
     }
   }, [data])
-
 
   if (loading) return <p>Loading ...</p>;
   if (error) {
