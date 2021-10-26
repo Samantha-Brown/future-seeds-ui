@@ -1,9 +1,34 @@
 import { useForm } from "react-hook-form";
 import './SeedForm.css'
+import SeedIndex from '../SeedIndex/SeedIndex'
+import { CREATE_SEED_MUTATION } from '../../GraphQL/Mutations'
+import { useMutation } from '@apollo/client'
 
 const SeedForm = () => {
 const { register, handleSubmit, watch, formState: { errors } } = useForm();
-const onSubmit = data => {console.log(data)}
+
+
+
+const [createSeedEntry, { error }] = useMutation(CREATE_SEED_MUTATION)
+
+const onSubmit = (data) => {
+  createSeedEntry({
+    variables: {
+      name: data.name,
+      plantingDepth: data.plantingDepth,
+      timeToHarvest: data.timeToHarvest,
+      datePlanted: data.datePlanted,
+      expectedPlantHeight: data.expectedPlantHeight,
+      notes: data.notes,
+      sunExposure: data.sunExposure,
+      userId: data.userId
+    }
+  })
+}
+
+
+
+
 
   return (
     <div className='seed-form-container'>

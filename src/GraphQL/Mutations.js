@@ -36,7 +36,7 @@ mutation (
     $sunExposure: String!
     $userId: ID!
   ){
-    createSeedEntry(input {
+    createSeedEntry(
         name: $name
         plantingDepth: $plantingDepth
         timeToHarvest: $timeToHarvest
@@ -44,8 +44,8 @@ mutation (
         expectedPlantHeight: $expectedPlantHeight
         notes: $notes
         sunExposure: $sunExposure
-        userId: $userID
-    )}
+        userId: $userId
+    )
     {
       name
       plantingDepth
