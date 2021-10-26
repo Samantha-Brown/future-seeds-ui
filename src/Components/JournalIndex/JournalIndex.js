@@ -58,7 +58,6 @@ const JournalIndex = ( { currentUserID } ) => {
           </div> }
         { userJournals && <JournalCard
           userJournals={ userJournals }
-          key={ userJournals.date }
           /> }
       </div>
     </div>
