@@ -19,6 +19,7 @@ const onSubmit = (data) => {
       plantingDepth: data.plantingDepth,
       timeToHarvest: data.timeToHarvest,
       datePlanted: data.datePlanted,
+      daysToGerminate: data.daysToGerminate,
       expectedPlantHeight: data.expectedPlantHeight,
       notes: data.notes,
       sunExposure: data.sunExposure,

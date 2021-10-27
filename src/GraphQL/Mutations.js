@@ -32,6 +32,7 @@ mutation (
     $timeToHarvest: String!
     $datePlanted: String!
     $expectedPlantHeight: String!
+    $daysToGerminate: String!
     $notes: String!
     $sunExposure: String!
     $userId: ID!
@@ -41,6 +42,7 @@ mutation (
         plantingDepth: $plantingDepth
         timeToHarvest: $timeToHarvest
         datePlanted: $datePlanted
+        daysToGerminate: $daysToGerminate
         expectedPlantHeight: $expectedPlantHeight
         notes: $notes
         sunExposure: $sunExposure
@@ -52,6 +54,7 @@ mutation (
       timeToHarvest
       datePlanted
       expectedPlantHeight
+      daysToGerminate
       notes
       sunExposure
       userId
