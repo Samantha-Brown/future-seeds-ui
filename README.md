@@ -30,8 +30,18 @@ Run the application
 ## Backend Repo
 [Backend API Repo](https://github.com/future-seeds/future-seeds-api)
 
-## Wins & Challenges
-- 
+## Wins 
+
+- Self-teaching and successfully implementing a new technology, GraphQL.
+- Getting a full scope understanding of how an application works working with the BE team.
+- Working in a larger group comprised of FE and BE teams for the first time.
+
+## Challenges
+
+- Learning a new perspective of developing an application by collaborating and communicating with a Back End team
+- Having the BE and the FE both learn the same new technology was difficult because it was hard to understand where some issues were. But a win was I feel I have a more complete understanding of GraphQL on the FE and BE and it was cool to problem solve with the BE and FE.
+- Learning a new type of API required a different mindset then our regular RESTful API and challenged previous thoughts about getting data.
+
 
 ## Future Add-ons
 - OAuth for User login 
