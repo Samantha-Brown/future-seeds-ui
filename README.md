@@ -7,6 +7,10 @@ This application allows users to store data about themselves as users, their see
 ## Deployed Application
 [View the deployed application on Heroku](https://future-seeds-ui.herokuapp.com/)
 
+## Demo
+
+<img src='https://github.com/future-seeds/future-seeds-ui/blob/main/recording%20(6).gif' alt="Future Seeds gif" title="Future Seeds gif" width="500"/>
+
 ## Installation and Setup:
 
 Clone the Repo to your local machine
@@ -42,10 +46,6 @@ Frameworks:
 
 ## Backend Repo
 [Backend API Repo](https://github.com/future-seeds/future-seeds-api)
-
-## Illustrations
-
-<img src='https://github.com/future-seeds/future-seeds-ui/blob/main/recording%20(6).gif' alt="Future Seeds gif" title="Future Seeds gif" width="500"/>
 
 ## Wins 
 
@@ -103,4 +103,4 @@ Frameworks:
 ## Project Specs
 - The project spec & rubric can be found [here](https://mod4.turing.edu/projects/capstone/)
 
-[Back to top](#Deployed Application)
+[Back to top](#demo)
