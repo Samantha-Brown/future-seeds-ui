@@ -30,13 +30,13 @@ mutation (
     $name: String!
     $plantingDepth: String!
     $timeToHarvest: String!
-    $datePlanted: Sting!
+    $datePlanted: String!
     $expectedPlantHeight: String!
     $notes: String!
     $sunExposure: String!
     $userId: ID!
   ){
-    createSeedEntry(
+    createSeed(
         name: $name
         plantingDepth: $plantingDepth
         timeToHarvest: $timeToHarvest

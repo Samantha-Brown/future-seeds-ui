@@ -43,6 +43,7 @@ const SeedIndex = ({ currentUserID }) => {
         { !showForm && <button onClick={ () => setShowForm(true) }>New Card</button>}
         { showForm && <div>
           <SeedForm
+            currentUserID={ currentUserID }
             showForm={ showForm }
             />
           </div> }
