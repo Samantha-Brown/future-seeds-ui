@@ -46,7 +46,6 @@ const SeedIndex = ({ currentUserID }) => {
       <NavBar userPersonalInfo={ userPersonalInfo }/>
       { !showForm && <button className='show-form' type="submit"  onClick={ () => setShowForm(true) }><img className="image-button" src={AddSeedButton} alt='Add Seed Button'/></button> }
       <div className='seed-index'>
-        { !showForm && <button onClick={ () => setShowForm(true) }>New Card</button>}
         { showForm && <div>
           <SeedForm
             showForm={ showForm }
