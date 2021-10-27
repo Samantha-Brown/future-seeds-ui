@@ -60,7 +60,7 @@ Frameworks:
 - Learning a new type of API required a different mindset then our regular RESTful API and challenged previous thoughts about getting data.
 
 
-## Future Add-ons
+## Future Add-Ons
 - OAuth for User login 
 - Sorting features on seeds (by height size, days to harvest, germination length, sun to shady, etc)
 - User will be able to see upcoming weather
@@ -73,7 +73,7 @@ Frameworks:
 
 
 ## Contributors
-### Frontend contributors
+### Frontend Contributors
 🧑‍🌾  **Dave Leach**
 - Github: [Dave Leach](https://github.com/davidleach724)
 - LinkedIn: [Dave Leach](https://www.linkedin.com/in/davidleach724/)
@@ -86,7 +86,7 @@ Frameworks:
 - Github: [Samantha Brown](https://github.com/Samantha-Brown)
 - LinkedIn: [Samantha Brown](https://www.linkedin.com/in/samantha-brown-software-developer/)
 
-### Backend contributors
+### Backend Contributors
 👩‍🌾  **Caroline Tan**
 - Github: [Caroline Tan](https://github.com/carolinectan)
 - LinkedIn: [Caroline Tan](https://www.linkedin.com/in/carolinectan/)
