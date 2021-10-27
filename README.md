@@ -47,6 +47,8 @@ Frameworks:
 
 ## Illustrations
 
+<img src='https://github.com/future-seeds/future-seeds-ui/blob/main/recording%20(6).gif' alt="Future Seeds gif" title="Future Seeds gif" width="500"/>
+
 ## Wins 
 
 - Self-teaching and successfully implementing a new technology, GraphQL.
