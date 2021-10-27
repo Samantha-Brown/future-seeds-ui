@@ -1,24 +1,19 @@
 .seed-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  border: 2px solid yellow;
 }
 
 @media screen and (min-width: 768px) {
   .seed-card {
-    border: 2px solid green;
+    margin: 0 3% 0 3%;
   }
 
   .seed-container {
-    /* display: grid; */
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    border: 2px solid green;
-    /* grid-template-rows: repeat(3, 1fr);
-    border: 2px solid blue; */
-    /* flex-wrap: wrap; */
-    /* justify-content: flex-start; */
+    justify-content: space-around;
     width: 100%;
-    max-height: 50%;
   }
 }

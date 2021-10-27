@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #63A958;
+  color: #119da4;
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.2);
   background-color: rgba(3, 206, 36, 0.3);
   z-index: -1;
@@ -26,7 +26,6 @@
   margin: 10px;
   border: none;
   border-bottom: 3px solid black;
-
   border-radius: 5px;
 }
 

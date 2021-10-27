@@ -42,7 +42,7 @@ const JournalIndex = ( { currentUserID } ) => {
   };
 
   return (
-    <div>
+    <div className='main-journal-div'>
        <NavBar userPersonalInfo={ userPersonalInfo }/>
        <div className='journal-index'>
        <button className="show-form" onClick= { () => setShowForm(true) }>Add New Journal Entry</button>

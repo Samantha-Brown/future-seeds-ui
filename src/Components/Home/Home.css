@@ -80,5 +80,39 @@
   .big-logo {
     width: 70%;
   }
+  .main-title {
+    height: 40%;
+  }
+  .circle-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .circle-1 {
+    /* background-color: #00b4d8;
+    background-color: #43aa8b; */
+    background-color: #119da4;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .circle-2 {
+    /* background-color: #023e8a; */
+    /* background-color: #0f4c5c; */
+    background-color: #065a60;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .circle-3 {
+    /* background-color: #6d597a; */
+    background-color: #4b3f72;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
 
 }

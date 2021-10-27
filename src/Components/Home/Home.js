@@ -29,6 +29,11 @@ const Home = () => {
       <div className="main-title">
         <img src={titleLogo} alt="future seeds title" className="big-logo" />
       </div>
+      <div className='circle-images'>
+        <div className='circle-1'></div>
+        <div className='circle-2'></div>
+        <div className='circle-3'></div>
+      </div>
       <div className="home-line"></div>
       <div className="bottom-home">
         <div className="mission">
