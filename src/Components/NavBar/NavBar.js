@@ -4,7 +4,7 @@ import boxLogo from '../../images/fs.png';
 
 const NavBar = ({ userPersonalInfo }) => {
   return (
-    <div>
+    <div className='nav-container'>
       <div className="top-home-bar">
         <div className="left-nav">
           <img src={ boxLogo } alt="small logo" className="small-logo" />
@@ -17,7 +17,7 @@ const NavBar = ({ userPersonalInfo }) => {
             </p>
           </div>
         </div>
-        <div className="home-links">
+        <div className="home-links nav-link">
           <Link
             to="/seeds"
             className="links to-seeds"

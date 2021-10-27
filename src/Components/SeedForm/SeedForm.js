@@ -46,7 +46,7 @@ const SeedForm = ({ userId, handleChange}) => {
         </select>
         <input placeholder='Time to Harvest' className='input-seeds' {...register('timeToHarvest')} />
         <input placeholder='Notes' className='input-seeds input-notes' {...register('notes')} />
-        <input type='submit' className='signup-btn' />
+        <input type='submit' className='new-entry-btn' />
       </form>
     </div>
   )

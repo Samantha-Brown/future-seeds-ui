@@ -15,18 +15,17 @@ export const hasOperationName = (req, operationName) => {
 export const aliasQuery = ( req, operationName ) => {
 
   if (hasOperationName(req, operationName) && operationName === 'getUsers') {
-
     req.alias = `gql${operationName}Query`;
     req.reply(res => {
-      res.body.data = user_list;
+    res.body.data = user_list;
     })
   }
   if (hasOperationName(req, 'getSelectedUser') && operationName == 'getSelectedUser') {
     req.body.variables.id = 11;
-      req.alias = `gql${operationName}Query`;
-      req.reply(res => {
-        res.body.data = selected_user_data
-      })
+    req.alias = `gql${operationName}Query`;
+    req.reply(res => {
+    res.body.data = selected_user_data
+    })
   }
 }
 
