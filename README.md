@@ -30,6 +30,8 @@ Run the application
 ## Backend Repo
 [Backend API Repo](https://github.com/future-seeds/future-seeds-api)
 
+## Illustrations
+
 ## Wins 
 
 - Self-teaching and successfully implementing a new technology, GraphQL.
