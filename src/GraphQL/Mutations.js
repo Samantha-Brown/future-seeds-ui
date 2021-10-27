@@ -26,9 +26,6 @@ export const CREATE_USER_MUTATION = gql`
   }
 `
 
-// line 19-23 is the spot what happens after the mutation
-// what is returned
-
 export const CREATE_JOURNAL_MUTATION = gql`
   mutation (
     $userId: ID!
@@ -48,3 +45,4 @@ export const CREATE_JOURNAL_MUTATION = gql`
     }
   }
 `
+
