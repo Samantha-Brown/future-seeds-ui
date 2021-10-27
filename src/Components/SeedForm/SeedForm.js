@@ -41,7 +41,7 @@ const SeedForm = ({ userId, handleChange}) => {
         <select className='input-seeds' { ...register('sunExposure') }>
           <option value=''>Select...</option>
           <option value='Full sun'>Full Sun</option>
-          <option value='Part shade'>Partial Sun</option>
+          <option value='Part shade'>Part Shade</option>
           <option value='Full shade'>Full Shade</option>
         </select>
         <input placeholder='Time to Harvest' className='input-seeds' {...register('timeToHarvest')} />
