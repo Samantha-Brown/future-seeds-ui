@@ -7,8 +7,6 @@ This application allows users to store data about themselves as users, their see
 ## Deployed Application
 [View the deployed application on Heroku](https://future-seeds-ui.herokuapp.com/)
 
-## Demo
-
 ## Installation and Setup:
 
 Clone the Repo to your local machine
@@ -104,3 +102,5 @@ Frameworks:
 
 ## Project Specs
 - The project spec & rubric can be found [here](https://mod4.turing.edu/projects/capstone/)
+
+**[Back to top](## Deployed Application)**
