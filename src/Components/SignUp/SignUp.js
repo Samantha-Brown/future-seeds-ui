@@ -30,12 +30,6 @@ const SignUp = ({ handleChange }) => {
     user.then(res => handleChange(res.data.createUser.id))
   }
 
-  useEffect(() => {
-    if (data) {
-      console.log('mutatedResults: ', data.createUser.id)
-    }
-  }, [data])
-
   if (!error) {
     console.log(error)
   }
