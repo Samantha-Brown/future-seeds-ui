@@ -46,3 +46,31 @@ export const CREATE_JOURNAL_MUTATION = gql`
   }
 `
 
+export const CREATE_SEED_MUTATION = gql`
+mutation (
+    $name: String!
+    $plantingDepth: String!
+    $daysToGerminate: String!
+    $timeToHarvest: String!
+    $datePlanted: String!
+    $sunExposure: String!
+    $expectedPlantHeight: String!
+    $notes: String!
+    $userId: ID!
+  ){
+    createSeed(
+      name: $name
+      plantingDepth: $plantingDepth
+      daysToGerminate: $daysToGerminate
+      timeToHarvest: $timeToHarvest
+      datePlanted: $datePlanted
+      sunExposure: $sunExposure
+      expectedPlantHeight: $expectedPlantHeight
+      notes: $notes
+      userId: $userId
+    )
+    {
+      id
+    }
+  }
+`

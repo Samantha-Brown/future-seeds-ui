@@ -36,6 +36,10 @@ const SeedIndex = ({ currentUserID }) => {
     )
   };
 
+  const handleChange = (newSeed) => {
+    setUserSeeds([...userSeeds, newSeed])
+  }
+
   return (
     <div>
       <NavBar userPersonalInfo={ userPersonalInfo }/>
@@ -44,6 +48,8 @@ const SeedIndex = ({ currentUserID }) => {
         { showForm && <div>
           <SeedForm
             showForm={ showForm }
+            userId={ currentUserID }
+            handleChange= { handleChange }
             />
           </div> }
         { userSeeds && <SeedCard
