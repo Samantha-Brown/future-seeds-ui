@@ -1,5 +1,5 @@
 import './SeedCard.css'
-import plantImage from '../../images/caleb-george.jpg'
+import flower from '../../images/flower.png'
 
 const SeedCard = ({ userSeeds }) => {
 
@@ -7,9 +7,8 @@ const SeedCard = ({ userSeeds }) => {
     return (
       <div className='seed-card' key={ userSeeds.id }>
         <h1 className='seed-title'>{ userSeeds.name }</h1>
-        <div className='noise'></div>
+        <img className='plant-image' src={ flower } alt='green plant with pink background' />
         <div className='plant-info'>
-          <img className='plant-image' src={ plantImage } alt='green plant with pink background' />
           <div className='plant-text'>
             <ul>{`Plant ${ userSeeds.plantingDepth } deep`}</ul>
             <ul>{`${ userSeeds.daysToGerminate } to germinate`}</ul>
@@ -27,9 +26,9 @@ const SeedCard = ({ userSeeds }) => {
   })
 
   return (
-    <div className='seed-container'>
-      <div>{ seedCards }</div>
-    </div>
+    <>
+      <div className='seed-container'>{ seedCards }</div>
+    </>
   )
 };
 

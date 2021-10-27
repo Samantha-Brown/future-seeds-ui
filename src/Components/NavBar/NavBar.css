@@ -5,9 +5,43 @@
 }
 
 .user-information {
-  padding-left: 2vw;
+  padding-left: 2%;
 }
 
 .user-name {
-  font-size: 4vh;
+  font-size: 20px;
+}
+
+.nav-link {
+  width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .small-logo {
+    margin-left: 3%;
+  }
+
+  .user-information {
+    padding-left: 2%;;
+  }
+
+  .nav-link {
+    width: 40%;
+    margin: 0;
+  }
+
+  .user-name {
+    font-size: 4vh;
+  }
+
+  .nav-container {
+    width: 100%;
+  }
+
+  .top-home-bar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+  }
 }
