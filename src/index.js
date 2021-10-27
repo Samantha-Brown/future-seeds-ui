@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Error from './Components/Error/Error';
 import App from './Components/App/App'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css';
@@ -10,7 +9,7 @@ import { onError } from '@apollo/client/link/error';
 const errorLink = onError(({ graphQLErrors, networkError}) => {
   if ( graphQLErrors ) {
     graphQLErrors.map(({ message, location, path }) => {
-      return alert(`GraphQL error ${message}`)
+      return console.log(`GraphQL error ${message}`)
     })
   }
 })

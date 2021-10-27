@@ -10,6 +10,11 @@ import { useQuery } from '@apollo/client';
 import { LOAD_ALL_USERS } from '../../GraphQL/Queries';
 import './App.css';
 
+import { CREATE_USER_MUTATION } from '../../GraphQL/Mutations'
+
+import { useMutation } from '@apollo/client'
+
+
 const App = () => {
   const [currentUserID, setCurrentUserID] = useState(null);
   const [usersList, setUsersList] = useState([]);
@@ -32,7 +37,11 @@ const App = () => {
     <main>
       <Switch>
         <Route exact path="/" component={ Home } />
-        <Route exact path="/signup/" component={ SignUp } />
+        <Route exact path="/signup/">
+          <SignUp
+          handleChange={ handleChange }
+            />
+          </Route>
         <Route exact path="/login/">
           <LogIn
             usersList={ usersList }
