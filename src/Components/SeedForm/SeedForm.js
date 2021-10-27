@@ -4,11 +4,11 @@ import { useMutation } from "@apollo/client";
 import './SeedForm.css'
 
 const SeedForm = ({ userId, handleChange}) => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
   const [createSeed, { error }] = useMutation(CREATE_SEED_MUTATION)
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     createSeed({
       variables: {
         name: data.name,
@@ -23,6 +23,7 @@ const SeedForm = ({ userId, handleChange}) => {
       }
     })
     handleChange(data)
+    e.target.reset();
   }
   if (error) {
     console.log(error)
