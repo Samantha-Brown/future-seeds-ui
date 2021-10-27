@@ -7,9 +7,9 @@ const JournalForm = ({ userId, handleChange }) => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [createJournalEntry, { error }] = useMutation(CREATE_JOURNAL_MUTATION)
 
-  
 
-  const onSubmit = (data) => {
+
+  const onSubmit = (data, e) => {
     createJournalEntry({
       variables: {
         userId: userId,
@@ -18,6 +18,7 @@ const JournalForm = ({ userId, handleChange }) => {
       }
     })
     handleChange(data)
+    e.target.reset();
   }
 
   if (error) {
