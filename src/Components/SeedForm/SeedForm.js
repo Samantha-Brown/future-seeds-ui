@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import './SeedForm.css'
 
 const SeedForm = ({ userId, handleChange}) => {
-  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm({ mode: "onChange" });
 
   const [createSeed, { error }] = useMutation(CREATE_SEED_MUTATION)
 
