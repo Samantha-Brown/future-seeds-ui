@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 import boxLogo from '../../images/fs.png';
+import circle1 from '../../images/circle1.png'
+import circle2 from '../../images/circle2.png'
+import circle3 from '../../images/circle3.png'
+
 import titleLogo from '../../images/title-green.png';
 
 const Home = () => {
@@ -30,9 +34,9 @@ const Home = () => {
         <img src={titleLogo} alt="future seeds title" className="big-logo" />
       </div>
       <div className='circle-images'>
-        <div className='circle-1'></div>
-        <div className='circle-2'></div>
-        <div className='circle-3'></div>
+        <img className='circle-1' src={circle1}/>
+        <img className='circle-2' src={circle2} />
+        <img className='circle-3' src={circle3} />
       </div>
       <div className="home-line"></div>
       <div className="bottom-home">
