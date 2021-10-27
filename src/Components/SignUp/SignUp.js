@@ -1,5 +1,5 @@
-import { Link, Redirect } from 'react-router-dom'
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import StateList from '../StateList/StateList'
 import './SignUp.css'
 import signUp from '../../images/signup.png'
@@ -13,7 +13,9 @@ const SignUp = ({ handleChange }) => {
   const [userState, setUserState] = useState('AL')
   const [userIntentions, setUserIntentions] = useState('')
 
-  const [createUser, { error }] = useMutation(CREATE_USER_MUTATION)
+  const [createUser, { data, error }] = useMutation(CREATE_USER_MUTATION)
+
+  
 
   const addUser = () => {
   const user =  createUser({
@@ -27,6 +29,12 @@ const SignUp = ({ handleChange }) => {
     })
     user.then(res => handleChange(res.data.createUser.id))
   }
+
+  useEffect(() => {
+    if (data) {
+      console.log('mutatedResults: ', data.createUser.id)
+    }
+  }, [data])
 
   if (!error) {
     console.log(error)
