@@ -20,7 +20,9 @@
   text-align: left;
   position: relative;
   margin: 3%;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7%;
 }
 
 .journal-text {
@@ -40,9 +42,9 @@ button {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .journal-card {
-    width: 40%;
+    width: 70%;
   }
 
 }
