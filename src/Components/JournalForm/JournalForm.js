@@ -26,10 +26,11 @@ const JournalForm = ({ userId, handleChange }) => {
 
   return (
     <div className='journal-form-container'>
+      <h1 className='form-header'>New Journal Form</h1>
       <form className='journal-form' onSubmit={ handleSubmit(onSubmit) }>
         <input type="date" className='input-date' { ...register('date') } />
         <input placeholder='Description' className='input-description' { ...register('description') } />
-        <input type='submit' className='entry-btn' />
+        <input type='submit' className='new-entry-btn' />
       </form>
     </div>
   )

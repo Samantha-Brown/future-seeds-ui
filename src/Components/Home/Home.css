@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .top-home-bar {
-  height: 10vh;
-  width: 100vw;
+  height: 15%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -16,16 +16,18 @@
 .home-links {
   display: flex;
   align-items: flex-end;
+  justify-content: space-around;
+  margin: 2% 3% 0 3%;
+  width: 30%;
 }
 
 .links {
-  margin: 7px;
   color: black;
 }
 
-.home-line{
-  width: 93vw;
-  margin: 3px;
+.home-line {
+  width: 93%;
+  margin: 2% 3% 2% 3%;
   border-top: 1px solid rgba(96, 96, 96, 0.379);
   border-bottom: 1px solid rgba(96, 96, 96, 0.379);
 }
@@ -33,33 +35,103 @@
 .small-logo {
   height: 8vh;
   border: 1px solid black;
-  margin: 5px;
+  margin: 1% 3% 0 3%;
 }
 
 .main-title {
-  height: 55vh;
-  width: 100vw;
+  height: 50%;
+  width: 100%;
 }
 
 .big-logo {
-  width: 70vw;
+  width: 80%;
+  margin-left: 5%;
 }
 
 .bottom-home {
-  height: 35vh;
-  width: 100vw;
+  height: 30%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
 .mission {
-  width: 30vw;
-  height: 18vh;
-  margin-top: 15px;
+  width: 40%;
+  height: 20%;
+  margin: 0% 3% 2% 3%;
   border-bottom: 1px solid rgba(96, 96, 96, 0.379);
 }
 
 .mission-quote, .mission-author {
   margin: 10px;
   color:rgba(63, 132, 93)
+}
+
+.circle-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 10%;
+}
+
+.circle-1 {
+  margin: 0 0 10% 0;
+  height: 100px;
+  width: 100px;
+}
+
+.circle-2 {
+  margin: 10% 0 10% 0;
+  height: 100px;
+  width: 100px;
+}
+
+.circle-3 {
+  margin: 10% 0 0 0;
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-links {
+    width: 20%;
+  }
+
+  .mission {
+    width: 30vw;
+  }
+
+  .big-logo {
+    width: 70%;
+  }
+  .main-title {
+    height: 40%;
+  }
+  .circle-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5% 0 5% 0;
+  }
+
+  .circle-1 {
+    margin: 0;
+    height: 200px;
+    width: 200px;
+  }
+
+  .circle-2 {
+    margin: 0;
+    height: 200px;
+    width: 200px;
+  }
+
+  .circle-3 {
+    margin: 0;
+    height: 200px;
+    width: 200px;
+  }
+
 }

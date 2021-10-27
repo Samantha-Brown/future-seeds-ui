@@ -21,7 +21,7 @@ const onSubmit = data => {console.log(data)}
         </select>
         <input placeholder='Time to Harvest' className='input-seeds' {...register('time_to_harvest')} />
         <input placeholder='Notes' className='input-seeds input-notes' {...register('notes')} />
-        <input type='submit' className='signup-btn' />
+        <input type='submit' className='new-entry-btn' />
       </form>
     </div>
   )

@@ -11,23 +11,38 @@
 .journal-card {
   color: #63A958;
   background-color: #fff7d0;
-  border-radius: 20px;
-  box-shadow: 0 1px 5px rgb(0 0 0 / 0.5);
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.2);
   font-size: 12px;
-  width: 80%;
-  height: 16em;
+  width: 90%;
+  min-height: 16em;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   position: relative;
-  margin: 5px;
-  justify-content: center;
+  margin: 3%;
+  justify-content: space-between;
 }
 
+.journal-text {
+  margin: 5%;
+  height: 75%;
+}
+
+.date-text {
+  font-size: 16px;
+  margin: 5% 3% 0 auto;
+}
 button {
   width: 200px;
   height: 35px;
   color: black;
   font-size: 18px;
   border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .journal-card {
+    width: 40%;
+  }
+
 }
