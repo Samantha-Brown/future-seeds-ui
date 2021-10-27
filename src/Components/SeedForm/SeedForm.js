@@ -24,7 +24,6 @@ const SeedForm = ({ userId, handleChange}) => {
     })
     handleChange(data)
   }
-
   if (error) {
     console.log(error)
   }
