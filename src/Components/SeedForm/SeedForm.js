@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import './SeedForm.css'
 
 const SeedForm = ({ userId, handleChange}) => {
-  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
   const [createSeed, { error }] = useMutation(CREATE_SEED_MUTATION)
 
@@ -33,19 +33,19 @@ const SeedForm = ({ userId, handleChange}) => {
     <div className='seed-form-container'>
       <form className='seed-form' onSubmit={handleSubmit(onSubmit)}>
         <h1 className='form-header'>New Seed Form</h1>
-        <input placeholder='Seed Name' className='input-seeds' { ...register('name') } />
-        <input type="date" className='input-seeds' { ...register('datePlanted') } />
-        <input placeholder='Planting Depth' className='input-seeds' { ...register('plantingDepth') } />
-        <input placeholder='Days to Germinate' className='input-seeds' { ...register('daysToGerminate') } />
-        <input placeholder='Plant Height' className='input-seeds' { ...register('expectedPlantHeight') } />
+        <input placeholder='Seed Name' className='input-seeds' { ...register('name') } required/>
+        <input type="date" className='input-seeds' { ...register('datePlanted') } required/>
+        <input placeholder='Planting Depth' className='input-seeds' { ...register('plantingDepth') } required/>
+        <input placeholder='Days to Germinate' className='input-seeds' { ...register('daysToGerminate') } required/>
+        <input placeholder='Plant Height' className='input-seeds' { ...register('expectedPlantHeight') } required/>
         <select className='input-seeds' { ...register('sunExposure') }>
           <option value=''>Select...</option>
           <option value='Full sun'>Full Sun</option>
           <option value='Part shade'>Part Shade</option>
           <option value='Full shade'>Full Shade</option>
         </select>
-        <input placeholder='Time to Harvest' className='input-seeds' {...register('timeToHarvest')} />
-        <input placeholder='Notes' className='input-seeds input-notes' {...register('notes')} />
+        <input placeholder='Time to Harvest' className='input-seeds' {...register('timeToHarvest')} required/>
+        <input placeholder='Notes' className='input-seeds input-notes' {...register('notes')} required/>
         <input type='submit' className='new-entry-btn' />
       </form>
     </div>
