@@ -16,7 +16,7 @@ const JournalIndex = ( { currentUserID } ) => {
   const { error, loading, data } = useQuery(
     LOAD_SELECTED_USER,
     {
-      variables: {id: currentUserID}
+      variables: { id: currentUserID }
     }
   )
 
@@ -31,8 +31,12 @@ const JournalIndex = ( { currentUserID } ) => {
     }
   }, [data]);
 
-  if (loading) return <p>Loading ...</p>;
+  const handleChange = (newJournal) => {
+    setUserJournals([...userJournals, newJournal])
+  }
 
+
+  if (loading) return <p>Loading ...</p>;
   if (error) {
     return(
       <>
@@ -49,12 +53,13 @@ const JournalIndex = ( { currentUserID } ) => {
        <div className='journal-index'>
        { showForm &&
           <div>
-            <JournalForm />
+            <JournalForm 
+              userId={ currentUserID }
+              handleChange={ handleChange }/>
           </div> }
         <h1 className='form-header seed-header'>Seed Journals:</h1>
         { userJournals && <JournalCard
           userJournals={ userJournals }
-          key={ userJournals.date }
           /> }
       </div>
     </div>

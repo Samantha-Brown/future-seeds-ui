@@ -21,6 +21,7 @@ export const LOAD_SELECTED_USER = gql`
       journalEntries {
         description
         date
+        id
       }
       seeds {
         name
