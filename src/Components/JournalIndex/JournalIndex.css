@@ -16,8 +16,7 @@
   text-align: center;
   justify-content: space-around;
   position: relative;
-
-  }
+}
 
   @media screen and (min-width: 768px) {
     .main-journal-div {
@@ -34,5 +33,4 @@
       margin: 0;
       padding: 0;
     }
-
   }

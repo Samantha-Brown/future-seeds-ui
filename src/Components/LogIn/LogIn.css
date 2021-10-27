@@ -41,6 +41,7 @@
   height: auto;
   margin: 3vw;
 }
+
 @media screen and (min-width: 768px) {
   .login-container {
     width: 50%;
