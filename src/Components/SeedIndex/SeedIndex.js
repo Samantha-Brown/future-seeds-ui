@@ -7,13 +7,13 @@ import { useQuery } from '@apollo/client'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 import './SeedIndex.css'
 
-const SeedIndex = ({ currentUserID }) => {
+const SeedIndex = ( { currentUserID } ) => {
   const [showForm, setShowForm] = useState(false)
   const [userSeeds, setUserSeeds] = useState(null)
   const [userPersonalInfo, setUserPersonalInfo] = useState({})
 
   const { error, loading, data } = useQuery(
-    LOAD_SELECTED_USER, { variables: {id: currentUserID} });
+    LOAD_SELECTED_USER, { variables: { id: currentUserID } });
 
   useEffect(() => {
     if (data) {
@@ -26,7 +26,11 @@ const SeedIndex = ({ currentUserID }) => {
     }
   }, [data]);
 
-  if (loading) return <p>Loading ...</p>;
+  const handleChange = (newSeed) => {
+    setUserSeeds([...userSeeds, newSeed])
+  }
+
+  if (loading) return <p>Loading...</p>;
   if (error) {
     return(
       <>
@@ -41,10 +45,11 @@ const SeedIndex = ({ currentUserID }) => {
       <NavBar userPersonalInfo={ userPersonalInfo }/>
       <div className='seed-index'>
         { !showForm && <button onClick={ () => setShowForm(true) }>New Card</button>}
-        { showForm && <div>
+        { showForm &&
+         <div>
           <SeedForm
             currentUserID={ currentUserID }
-            showForm={ showForm }
+            handleChange={ handleChange }
             />
           </div> }
         { userSeeds && <SeedCard
