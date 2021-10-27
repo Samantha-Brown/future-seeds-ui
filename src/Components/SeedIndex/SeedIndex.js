@@ -6,6 +6,7 @@ import Error from '../Error/Error'
 import { useQuery } from '@apollo/client'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
 import './SeedIndex.css'
+import AddSeedButton from '../../images/AddSeedButton.png';
 
 const SeedIndex = ({ currentUserID }) => {
   const [showForm, setShowForm] = useState(false)
@@ -39,7 +40,7 @@ const SeedIndex = ({ currentUserID }) => {
   return (
     <div className='main-seed-div'>
       <NavBar userPersonalInfo={ userPersonalInfo }/>
-          { !showForm && <button className='show-form' onClick={ () => setShowForm(true) }>New Seed</button> }
+      { !showForm && <button className='show-form' type="submit"  onClick={ () => setShowForm(true) }><img className="image-button" src={AddSeedButton} alt='Add Seed Button'/></button> }
       <div className='seed-index'>
         { showForm &&
           <div>

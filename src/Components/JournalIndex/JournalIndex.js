@@ -6,6 +6,7 @@ import './JournalIndex.css'
 import { useQuery } from '@apollo/client'
 import Error from '../Error/Error'
 import { LOAD_SELECTED_USER } from '../../GraphQL/Queries'
+import AddJournalButton from '../../images/AddJournalButton.png';
 
 const JournalIndex = ( { currentUserID } ) => {
   const [showForm, setShowForm] = useState(false)
@@ -44,13 +45,13 @@ const JournalIndex = ( { currentUserID } ) => {
   return (
     <div className='main-journal-div'>
        <NavBar userPersonalInfo={ userPersonalInfo }/>
+       <button className="show-form" onClick= { () => setShowForm(true) }><img className="image-button" src={AddJournalButton} alt='add journal button'/></button>
        <div className='journal-index'>
-       <button className="show-form" onClick= { () => setShowForm(true) }>Add New Journal Entry</button>
        { showForm &&
           <div>
             <JournalForm />
           </div> }
-                  <h1 className='form-header seed-header'>Seed Journals:</h1>
+        <h1 className='form-header seed-header'>Seed Journals:</h1>
         { userJournals && <JournalCard
           userJournals={ userJournals }
           key={ userJournals.date }

@@ -19,7 +19,6 @@
   justify-content: space-around;
   margin: 2% 3% 0 3%;
   width: 30%;
-
 }
 
 .links {
@@ -96,7 +95,7 @@
 
 @media screen and (min-width: 768px) {
   .home-links {
-    width: 12%;
+    width: 20%;
   }
 
   .mission {
@@ -114,7 +113,7 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    padding: 7% 0 7% 0;
+    padding: 5% 0 5% 0;
   }
 
   .circle-1 {

@@ -64,20 +64,18 @@
 }
 
 .show-form {
-  width: 75px;
-  height: 75px;
-  border: none;
-  border-radius: 80%;
-  outline: none;
-  background: #b71540;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  font-size: 12px;
-  margin: 3% auto 0 80%;
+  border: 0;
+  background: transparent
 }
 
-.show-form:hover {
+.image-button {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin: 3% auto 0 90%;
+}
+
+.image-button:hover {
   background: #eb2f06;
 }
 
@@ -96,5 +94,12 @@
     width: 300px;
     height: 275px;
     margin: 3%;
+  }
+
+  .image-button {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 0;
   }
 }
