@@ -29,7 +29,7 @@ Run the application
 
 `npm start`
 
-## Front End Technologies
+## Frontend Technologies
 
 Languages:
 
