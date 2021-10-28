@@ -69,7 +69,8 @@ Frameworks:
 - Users will be able to add a plot and its attributes
 - User will be able to include expected vs actual growth for the journal 
 - User will be prompted to fill out an end of month journal summary 
-- Users will be able to see all other users specific plant informatio
+- Users will be able to see all other users specific plant information
+- Tags on the journal entries so users can search through and learn from others
 
 
 ## Contributors
